@@ -32,5 +32,9 @@
     "vite": "^6.3.0",
     "vite-join-media-queries": "^0.1.4",
     "vite-plugin-handlebars": "^2.0.0"
+  },
+  "dependencies": {
+    "@types/swiper": "^5.4.3",
+    "swiper": "^8.4.7"
   }
 }

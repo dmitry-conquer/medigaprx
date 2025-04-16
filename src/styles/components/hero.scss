@@ -1,0 +1,67 @@
+@use "../helpers/" as *;
+
+.hero {
+  &__inner {
+    padding-top: fluid(120, 300);
+    padding-bottom: fluid(0, 180);
+    position: relative;
+    @include large {
+      padding-top: rem(120);
+    }
+    @include medium {
+      padding-bottom: 0;
+    }
+  }
+  &__content {
+    max-width: 52%;
+    position: relative;
+    z-index: 3;
+    p:has(strong) {
+      margin-bottom: fluid(12, 16) !important;
+      font-size: fluid(18, 24) !important;
+    }
+    @include medium {
+      max-width: 100%;
+    }
+  }
+  &__buttons {
+    margin-top: fluid(12, 40);
+  }
+  &__image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 46%;
+    border-radius: 0px rem(60) rem(60) rem(60);
+    @include medium {
+      display: none;
+    }
+    &_mobile {
+      display: block;
+      position: relative;
+      max-width: 100%;
+      z-index: 1;
+      @include above-medium {
+        display: none;
+      }
+    }
+  }
+  &__vector {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 19%;
+    width: fluid(200, 827);
+    @include medium {
+      display: none;
+    }
+    &_mobile {
+      display: block;
+      left: 0;
+      width: 100%;
+      @include above-medium {
+        display: none;
+      }
+    }
+  }
+}

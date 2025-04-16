@@ -1,13 +1,18 @@
 @use "helpers" as *;
 
 :root {
-  --color-black: #000000;
+  --color-dark: #121212;
   --color-white: #ffffff;
-  --color-accent: #d35b5b;
+  --color-light: #E7F2F5;
+  --color-primary: #6DBF46;
+  --color-secondary: #21A0BE;
+  --color-primary-light: #ECF6E8;
+  --color-secondary-light: #D3ECF2;
+  --shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
+  --border-radius-base: #{rem(24)};
 
-  --font-family-base: "Roboto", sans-serif;
-  --font-family-accent: "Roboto", sans-serif;
+  --font-family-base: "Gilroy", sans-serif;
 
-  --container-width: #{rem(1440)};
-  --container-padding-x: #{rem(20)};
+  --container-width: #{rem(1550)};
+  --container-padding-x: #{rem(15)};
 }

@@ -4,6 +4,11 @@
 @use "utils";
 @use "globals";
 @use "helpers" as *;
+@use "components/buttons";
+@use "components/hero";
+@use "components/grid";
+@use "components/steps";
+@use "components/custom-scrollbar";
 
 // Importing components
 @use './components/footer';
