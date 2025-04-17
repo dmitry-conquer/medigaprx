@@ -53,6 +53,12 @@ p {
 p:not(:last-child):not([class]) {
   margin-bottom: fluid(12, 24);
 }
+a:not([class]) {
+  transition: color 0.3s ease;
+  @include hover {
+    color: var(--color-secondary);
+  }
+}
 
 .container {
   max-width: var(--container-width);

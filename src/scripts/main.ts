@@ -2,34 +2,16 @@ import "../styles/main.scss";
 import Steps from "./components/steps";
 import AccordionCollection from "./components/accordion";
 import Header from "./components/header";
-import Swiper from "swiper";
-import "swiper/swiper-bundle.css";
+import Slider from "./components/slider";
+import BackTopButton from "./components/back-top";
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
+
+declare const acfData: {
+  smoothScroll?: boolean;
+};
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize Swiper
-  const stepsNode = document.getElementById("steps-slider");
-  if (stepsNode) {
-    new Swiper(stepsNode, {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      speed: 900,
-      breakpoints: {
-        0: {
-          slidesPerView: 1.3,
-        },
-        600: {
-          slidesPerView: 1.8,
-        },
-        820: {
-          slidesPerView: 2.2,
-        },
-        1200: {
-          slidesPerView: 3,
-        },
-      },
-    });
-  }
-
   const steps = new Steps();
   steps.init();
 
@@ -38,4 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const header = new Header();
   header.init();
+
+  const slider = new Slider();
+  slider.init();
+
+  const backTopButton = new BackTopButton();
+  backTopButton.init();
+
+  if (acfData.smoothScroll) {
+    new Lenis({
+      autoRaf: true,
+      anchors: true,
+    });
+  }
 });

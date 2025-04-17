@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
   </head>
-  <body>
+  <body id="top">
     <div class="wrapper">
       {{> header}}
       <main>
@@ -141,7 +141,7 @@
                     </div>
                     <div class="step__description-wrapper" data-js-steps-content>
                       <div class="step__description-outer">
-                        <div class="step__description custom-scrollbar">
+                        <div class="step__description custom-scrollbar" data-lenis-prevent>
                           <h4>Review your current health insurance situation</h4>
                           <ul>
                             <li>In our office, at your house or over the phone</li>
@@ -213,7 +213,7 @@
                     </div>
                     <div class="step__description-wrapper" data-js-steps-content>
                       <div class="step__description-outer">
-                        <div class="step__description custom-scrollbar">
+                        <div class="step__description custom-scrollbar" data-lenis-prevent>
                           <h4>Review your current health insurance situation</h4>
                           <ul>
                             <li>In our office, at your house or over the phone</li>
@@ -251,7 +251,7 @@
                     </div>
                     <div class="step__description-wrapper" data-js-steps-content>
                       <div class="step__description-outer">
-                        <div class="step__description custom-scrollbar">
+                        <div class="step__description custom-scrollbar" data-lenis-prevent>
                           <h4>Review your current health insurance situation</h4>
                           <ul>
                             <li>In our office, at your house or over the phone</li>
@@ -611,6 +611,11 @@
       {{> footer}}
     </div>
 
+    <script>
+      const acfData = {
+        smoothScroll: 1,
+      };
+    </script>
     <script type="module" src="../src/scripts/main.ts" defer></script>
   </body>
 </html>
