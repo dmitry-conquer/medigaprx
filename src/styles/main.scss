@@ -4,6 +4,8 @@
 @use "utils";
 @use "globals";
 @use "helpers" as *;
+
+// Importing components
 @use "components/buttons";
 @use "components/hero";
 @use "components/grid";
@@ -12,7 +14,5 @@
 @use "components/plans";
 @use "components/acc-default";
 @use "components/acc-grid";
-
-// Importing components
 @use './components/footer';
 @use './components/header';

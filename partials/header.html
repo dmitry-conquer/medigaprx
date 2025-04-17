@@ -1,1 +1,80 @@
-<header></header>
+<header class="header" data-js-header>
+  <div class="header__container container">
+    <a href="/" class="header__logo-wrapper">
+      <img src="/images/header-logo.svg" alt="" class="header__logo" />
+    </a>
+    <nav class="header__nav" aria-label="Primary navigation">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="#about-us" class="header__nav-link">About Us</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#our-process" class="header__nav-link">Our Process</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#medigaprx" class="header__nav-link">MedigapRx</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#contact-us" class="header__nav-link">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+    <button
+      id="header-button"
+      title="Open menu"
+      aria-label="Open menu"
+      class="header__button"
+      type="button"
+      aria-expanded="false"
+      aria-controls="header-overlay"
+      data-js-header-trigger-button
+    >
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div
+    data-js-header-overlay
+    style="background-image: url(&quot;/images/overlay-bg.svg&quot;)"
+    class="header__overlay header-overlay"
+    id="header-overlay"
+    aria-labelledby="header-button"
+  >
+    <div class="header-overlay__inner">
+      <nav class="header-overlay__nav" aria-label="Mobile navigation">
+        <ul class="header-overlay__nav-list">
+          <li class="header-overlay__nav-item">
+            <a href="#about-us" class="header-overlay__nav-link">About Us</a>
+          </li>
+          <li class="header-overlay__nav-item">
+            <a href="#our-process" class="header-overlay__nav-link">Our Process</a>
+          </li>
+          <li class="header-overlay__nav-item">
+            <a href="#medigaprx" class="header-overlay__nav-link">MedigapRx</a>
+          </li>
+          <li class="header-overlay__nav-item">
+            <a href="#contact-us" class="header-overlay__nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-overlay__buttons buttons">
+        <a href="#" class="button button_primary">Call (954) 737-7877</a>
+        <a href="#" class="button button_secondary">Book an appointment</a>
+      </div>
+      <div class="header-overlay__footer">
+        <div class="header-overlay__contacts">
+          <a href="#" class="header-overlay__contacts-number">(954) 737-7877</a>
+          <a href="#" class="header-overlay__contacts-email">support@medigaprx.com</a>
+        </div>
+        <div class="header-overlay__socials">
+          <a href="#" class="header-overlay__socials-link" title="Linkedin">
+            <img src="/images/Linkedin.svg" alt="" class="header-overlay__socials-icon" />
+          </a>
+          <a href="#" class="header-overlay__socials-link" title="Facebook">
+            <img src="/images/facebook.svg" alt="" class="header-overlay__socials-icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

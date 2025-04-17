@@ -6,10 +6,13 @@
     padding-bottom: fluid(0, 180);
     position: relative;
     @include large {
-      padding-top: rem(120);
+      padding-top: rem(170);
     }
     @include medium {
       padding-bottom: 0;
+    }
+    @include x-small {
+      padding-top: rem(120);
     }
   }
   &__content {

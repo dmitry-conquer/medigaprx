@@ -1,6 +1,7 @@
 import "../styles/main.scss";
 import Steps from "./components/steps";
 import AccordionCollection from "./components/accordion";
+import Header from "./components/header";
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
 
@@ -34,4 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const accordionCollection = new AccordionCollection();
   accordionCollection.init();
+
+  const header = new Header();
+  header.init();
 });
