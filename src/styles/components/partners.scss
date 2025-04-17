@@ -1,0 +1,57 @@
+@use "../helpers/" as *;
+
+.partners {
+  background-color: var(--color-light);
+  border-radius: rem(100) rem(100) 0 0;
+  @include medium {
+    border-radius: 0;
+  }
+  &__header {
+    text-align: center;
+  }
+  &__list {
+    transition-timing-function: linear;
+  }
+  &__item {
+    width: fluid(120, 200) !important;
+    height: rem(50) !important;
+    object-fit: contain;
+  }
+  &__body {
+    margin-top: fluid(60, 180);
+    display: flex;
+    align-items: center;
+    gap: rem(34) fluid(34, 217);
+    @include large {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__image {
+    border-radius: rem(60);
+    overflow: hidden;
+    @include medium {
+      border-radius: rem(16);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    flex: 0 1 rem(535);
+    @include large {
+      flex: 0 1 auto;
+    }
+    h2 {
+      text-transform: uppercase;
+    }
+    h3 {
+      margin-bottom: rem(16);
+    }
+  }
+  &__buttons {
+    flex-wrap: wrap;
+  }
+}

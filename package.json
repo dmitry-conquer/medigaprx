@@ -34,7 +34,6 @@
     "vite-plugin-handlebars": "^2.0.0"
   },
   "dependencies": {
-    "@types/swiper": "^5.4.3",
     "lenis": "^1.2.3",
     "swiper": "^8.4.7"
   }
