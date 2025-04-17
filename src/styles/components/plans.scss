@@ -1,26 +1,46 @@
 @use "../helpers/" as *;
 
 .plans {
-  &__cotnainer {
-  }
-  &__accordion {
-  }
-  &__accordion-item {
+  &__title {
+    padding-inline: calc((100% - rem(1550)) / 2);
+    margin-inline: rem(15);
   }
 }
 
 .plan {
+  &:first-child {
+    .plan__header-inner {
+      border-top: rem(3) solid var(--color-secondary-light);
+    }
+  }
+  &:not(:last-child) {
+    margin-bottom: rem(18);
+  }
   &__header {
-    border-top: rem(3) solid var(--color-secondary-light);
+    transition: background-color 0.3s ease;
+    padding-inline: calc((100% - rem(1550)) / 2);
+    &.is-active {
+      background-color: var(--color-secondary-light);
+      .plan__icon {
+        background-color: var(--color-primary);
+        span {
+          background-color: var(--color-white);
+          &.ver {
+            transform: translate(-50%, -50%) rotate(0);
+          }
+        }
+      }
+    }
+  }
+  &__header-inner {
+    border-bottom: rem(3) solid var(--color-secondary-light);
     display: flex;
     align-items: flex-start;
     gap: rem(10) rem(20);
-    padding: fluid(25, 32) rem(15);
-    margin-inline: rem(-15);
+    padding: fluid(25, 32) 0;
+    margin-inline: rem(15);
     transition: all 0.3s ease;
-    @include hover {
-      box-shadow: var(--shadow);
-    }
+
     @include small {
       flex-wrap: wrap;
       align-items: center;
@@ -28,7 +48,7 @@
   }
   &__title {
     text-transform: uppercase;
-    flex: 0 1 rem(550);
+    flex: 0 1 37%;
     column-gap: rem(26);
     text-align: left;
     margin-bottom: 0;
@@ -56,8 +76,10 @@
     @include small {
       border: rem(2) solid var(--color-primary);
     }
+    transition: all 0.3s ease;
 
     span {
+      transition: all 0.3s ease;
       background-color: var(--color-primary);
       border-radius: rem(20);
       width: rem(24);
@@ -78,5 +100,12 @@
     }
   }
   &__content {
+    max-height: 0;
+    overflow: hidden;
+    will-change: auto;
+    transition: max-height 0.3s ease;
+    padding-inline: calc((100% - rem(1550)) / 2);
+  }
+  &__content-inner {
   }
 }

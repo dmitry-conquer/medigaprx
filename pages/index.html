@@ -314,29 +314,205 @@
         </section>
 
         <section class="plans section-padding">
-          <div class="plans__cotnainer container">
-            <h2>Medicare plans</h2>
-            <div class="plans__accordion">
+          <div class="plans__cotnainer">
+            <h2 class="plans__title">Medicare plans</h2>
+            <div class="plans__accordion" data-js-accordion>
               <div class="plans__accordion-item plan">
                 <button
                   id="accordion-button-1"
                   aria-controls="accordion-panel-1"
                   type="button"
                   aria-expanded="false"
+                  aria-selected="false"
+                  data-js-accordion-button
                   class="plan__header"
                 >
-                  <h3 class="plan__title">Medicare Part A</h3>
-                  <p class="plan__text">
-                    Covers hospital stays, skilled nursing facilities, hospice care, and limited home health services.
-                    Most qualify for premium-free coverage.
-                  </p>
-                  <div class="plan__icon">
-                    <span class="hor"></span>
-                    <span class="ver"></span>
+                  <div class="plan__header-inner">
+                    <h3 class="plan__title">Medicare Part A</h3>
+                    <p class="plan__text">
+                      Covers hospital stays, skilled nursing facilities, hospice care, and limited home health services.
+                      Most qualify for premium-free coverage.
+                    </p>
+                    <div class="plan__icon">
+                      <span class="hor"></span>
+                      <span class="ver"></span>
+                    </div>
                   </div>
                 </button>
-                <div role="region" id="accordion-panel-1" aria-labelledby="accordion-button-1" class="plan__content">
-                  <div class="content-plan-default"></div>
+                <div
+                  role="region"
+                  data-js-accordion-content
+                  id="accordion-panel-1"
+                  aria-labelledby="accordion-button-1"
+                  class="plan__content custom-scrollbar"
+                >
+                  <div class="plan__content-inner">
+                    <div class="acc-default">
+                      <div class="acc-default__list">
+                        <ul>
+                          <li><strong>Doctor services</strong></li>
+                          <li><strong>Ambulance services</strong></li>
+                          <li><strong>Nursing services</strong></li>
+                          <li><strong>Chemotherapy</strong></li>
+                          <li><strong>Durable medical equipment</strong></li>
+                          <li><strong>Preventive services to prevent illness</strong></li>
+                          <li>
+                            <strong>Prescription drugs under limited conditions</strong> (doctor’s office or hospital
+                            outpatient setting)
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="acc-default__content">
+                        <details>
+                          <summary>How much does Medicare Part B cost?</summary>
+                          <p>
+                            Medicare Part B recipients pay a monthly Part B premium. The price of the Part B premium is
+                            dependent on the your annual income (as indicated on your individual or joint tax return).
+                            The standard Part B premium amount in 2025 is $185. Most people pay the standard Part B
+                            premium amount however if your modified adjusted gross income as reported on your IRS tax
+                            return from 2 years ago is above a certain amount, you’ll pay the standard premium amount
+                            and an Income Related Monthly Adjustment Amount (IRMAA). IRMAA is an extra charge added to
+                            your premium. Also, it’s important to know that there is a deductible that individuals are
+                            required to pay before Medicare begins to pay their share of all services covered by
+                            Medicare Part B. After the deductible is paid, recipients pay 20% of what Medicare deems to
+                            be a “reasonable charge” while Medicare pays the remaining 80%. In 2025, the deductible
+                            amount is $257.
+                          </p>
+                        </details>
+                        <details>
+                          <summary>How to sign up for Medicare Part B?</summary>
+                          <p>
+                            Medicare Part B recipients pay a monthly Part B premium. The price of the Part B premium is
+                            dependent on the your annual income (as indicated on your individual or joint tax return).
+                            The standard Part B premium amount in 2025 is $185. Most people pay the standard Part B
+                            premium amount however if your modified adjusted gross income as reported on your IRS tax
+                            return from 2 years ago is above a certain amount, you’ll pay the standard premium amount
+                            and an Income Related Monthly Adjustment Amount (IRMAA). IRMAA is an extra charge added to
+                            your premium. Also, it’s important to know that there is a deductible that individuals are
+                            required to pay before Medicare begins to pay their share of all services covered by
+                            Medicare Part B. After the deductible is paid, recipients pay 20% of what Medicare deems to
+                            be a “reasonable charge” while Medicare pays the remaining 80%. In 2025, the deductible
+                            amount is $257.
+                          </p>
+                        </details>
+                        <details>
+                          <summary>How much does Medicare Part B cost?</summary>
+                          <p>
+                            Medicare Part B recipients pay a monthly Part B premium. The price of the Part B premium is
+                            dependent on the your annual income (as indicated on your individual or joint tax return).
+                            The standard Part B premium amount in 2025 is $185. Most people pay the standard Part B
+                            premium amount however if your modified adjusted gross income as reported on your IRS tax
+                            return from 2 years ago is above a certain amount, you’ll pay the standard premium amount
+                            and an Income Related Monthly Adjustment Amount (IRMAA). IRMAA is an extra charge added to
+                            your premium. Also, it’s important to know that there is a deductible that individuals are
+                            required to pay before Medicare begins to pay their share of all services covered by
+                            Medicare Part B. After the deductible is paid, recipients pay 20% of what Medicare deems to
+                            be a “reasonable charge” while Medicare pays the remaining 80%. In 2025, the deductible
+                            amount is $257.
+                          </p>
+                        </details>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="plans__accordion-item plan">
+                <button
+                  id="accordion-button-1"
+                  aria-controls="accordion-panel-1"
+                  type="button"
+                  aria-expanded="false"
+                  aria-selected="false"
+                  data-js-accordion-button
+                  class="plan__header"
+                >
+                  <div class="plan__header-inner">
+                    <h3 class="plan__title">Medicare Part A</h3>
+                    <p class="plan__text">
+                      Covers hospital stays, skilled nursing facilities, hospice care, and limited home health services.
+                      Most qualify for premium-free coverage.
+                    </p>
+                    <div class="plan__icon">
+                      <span class="hor"></span>
+                      <span class="ver"></span>
+                    </div>
+                  </div>
+                </button>
+                <div
+                  role="region"
+                  data-js-accordion-content
+                  id="accordion-panel-1"
+                  aria-labelledby="accordion-button-1"
+                  class="plan__content custom-scrollbar"
+                >
+                  <div class="plan__content-inner">
+                    <div class="acc-default">
+                      <div class="acc-default__list">
+                        <ul>
+                          <li><strong>Doctor services</strong></li>
+                          <li><strong>Ambulance services</strong></li>
+                          <li><strong>Nursing services</strong></li>
+                          <li><strong>Chemotherapy</strong></li>
+                          <li><strong>Durable medical equipment</strong></li>
+                          <li><strong>Preventive services to prevent illness</strong></li>
+                          <li>
+                            <strong>Prescription drugs under limited conditions</strong> (doctor’s office or hospital
+                            outpatient setting)
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="acc-default__content">
+                        <details>
+                          <summary>How much does Medicare Part B cost?</summary>
+                          <p>
+                            Medicare Part B recipients pay a monthly Part B premium. The price of the Part B premium is
+                            dependent on the your annual income (as indicated on your individual or joint tax return).
+                            The standard Part B premium amount in 2025 is $185. Most people pay the standard Part B
+                            premium amount however if your modified adjusted gross income as reported on your IRS tax
+                            return from 2 years ago is above a certain amount, you’ll pay the standard premium amount
+                            and an Income Related Monthly Adjustment Amount (IRMAA). IRMAA is an extra charge added to
+                            your premium. Also, it’s important to know that there is a deductible that individuals are
+                            required to pay before Medicare begins to pay their share of all services covered by
+                            Medicare Part B. After the deductible is paid, recipients pay 20% of what Medicare deems to
+                            be a “reasonable charge” while Medicare pays the remaining 80%. In 2025, the deductible
+                            amount is $257.
+                          </p>
+                        </details>
+                        <details>
+                          <summary>How to sign up for Medicare Part B?</summary>
+                          <p>
+                            Medicare Part B recipients pay a monthly Part B premium. The price of the Part B premium is
+                            dependent on the your annual income (as indicated on your individual or joint tax return).
+                            The standard Part B premium amount in 2025 is $185. Most people pay the standard Part B
+                            premium amount however if your modified adjusted gross income as reported on your IRS tax
+                            return from 2 years ago is above a certain amount, you’ll pay the standard premium amount
+                            and an Income Related Monthly Adjustment Amount (IRMAA). IRMAA is an extra charge added to
+                            your premium. Also, it’s important to know that there is a deductible that individuals are
+                            required to pay before Medicare begins to pay their share of all services covered by
+                            Medicare Part B. After the deductible is paid, recipients pay 20% of what Medicare deems to
+                            be a “reasonable charge” while Medicare pays the remaining 80%. In 2025, the deductible
+                            amount is $257.
+                          </p>
+                        </details>
+                        <details>
+                          <summary>How much does Medicare Part B cost?</summary>
+                          <p>
+                            Medicare Part B recipients pay a monthly Part B premium. The price of the Part B premium is
+                            dependent on the your annual income (as indicated on your individual or joint tax return).
+                            The standard Part B premium amount in 2025 is $185. Most people pay the standard Part B
+                            premium amount however if your modified adjusted gross income as reported on your IRS tax
+                            return from 2 years ago is above a certain amount, you’ll pay the standard premium amount
+                            and an Income Related Monthly Adjustment Amount (IRMAA). IRMAA is an extra charge added to
+                            your premium. Also, it’s important to know that there is a deductible that individuals are
+                            required to pay before Medicare begins to pay their share of all services covered by
+                            Medicare Part B. After the deductible is paid, recipients pay 20% of what Medicare deems to
+                            be a “reasonable charge” while Medicare pays the remaining 80%. In 2025, the deductible
+                            amount is $257.
+                          </p>
+                        </details>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

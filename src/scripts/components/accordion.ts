@@ -1,5 +1,5 @@
 type indexStateType = {
-  activeAccordionIndex: number;
+  activeIndexes: Set<number>;
 };
 
 const rootSelector = "[data-js-accordion]";
@@ -25,12 +25,25 @@ class Accordion {
     this.rootElement = rootElement;
     this.buttonElements = this.rootElement.querySelectorAll(this.selectors.button);
     this.state = this.getProxyState({
-      activeAccordionIndex: [...this.buttonElements].findIndex(buttonElement =>
-        buttonElement.classList.contains(this.stateClasses.isActive)
+      activeIndexes: new Set<number>(
+        [...this.buttonElements].reduce((acc: Set<number>, buttonElement: HTMLElement, index: number) => {
+          if (buttonElement.classList.contains(this.stateClasses.isActive)) {
+            acc.add(index);
+          }
+          return acc;
+        }, new Set<number>())
       ),
     });
+    this.init();
+  }
 
+  private init(): void {
+    if (!this.isReady()) return;
     this.bindEvents();
+    this.observeContentChanges();
+  }
+  isReady(): boolean {
+    return !!this.rootElement && !!this.buttonElements.length;
   }
 
   private bindEvents(): void {
@@ -44,7 +57,7 @@ class Accordion {
       get: (target: indexStateType, prop: keyof indexStateType) => {
         return target[prop];
       },
-      set: (target: indexStateType, prop: keyof indexStateType, value: number) => {
+      set: (target: indexStateType, prop: keyof indexStateType, value: Set<number>) => {
         target[prop] = value;
         this.updateUI();
 
@@ -54,9 +67,8 @@ class Accordion {
   }
 
   private updateUI() {
-    const { activeAccordionIndex } = this.state;
     this.buttonElements.forEach((buttonElement: HTMLElement, index: number) => {
-      const isActive = activeAccordionIndex === index;
+      const isActive = this.state.activeIndexes.has(index);
       const content = buttonElement.nextElementSibling as HTMLElement;
 
       buttonElement.classList.toggle(this.stateClasses.isActive, isActive);
@@ -67,16 +79,30 @@ class Accordion {
   }
 
   private onButtonClick(index: number) {
-    this.state.activeAccordionIndex = index;
+    if (this.state.activeIndexes.has(index)) {
+      this.state.activeIndexes.delete(index);
+    } else {
+      this.state.activeIndexes.add(index);
+    }
+    this.state.activeIndexes = new Set<number>(this.state.activeIndexes);
+  }
+
+  private observeContentChanges(): void {
+    const observer = new MutationObserver(() => {
+      this.updateUI();
+    });
+
+    observer.observe(this.rootElement, {
+      attributes: true,
+      attributeFilter: ["open"],
+      childList: true,
+      subtree: true,
+    });
   }
 }
 
 class AccordionCollection {
-  constructor() {
-    this.init();
-  }
-
-  private init(): void {
+  public init(): void {
     document.querySelectorAll(rootSelector).forEach(element => new Accordion(element as HTMLElement));
   }
 }

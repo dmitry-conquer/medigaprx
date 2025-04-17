@@ -17,13 +17,13 @@
   line-height: 1.22;
   width: 100%;
   max-width: rem(246);
+  transition: opacity 0.3s ease;
 
   @include x-small {
     max-width: 100%;
   }
   @include hover {
     opacity: 0.7;
-    transition: opacity 0.3s ease;
   }
   &_primary {
     background-color: var(--color-primary);
