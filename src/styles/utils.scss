@@ -1,34 +1,34 @@
 @use "helpers" as *;
 
 .sr-only {
-  border-width: 0;
-  clip: rect(0, 0, 0, 0);
+  position: absolute;
+  width: 1px;
   height: 1px;
+  padding: 0;
   margin: -1px;
   overflow: hidden;
-  padding: 0;
-  position: absolute;
   white-space: nowrap;
-  width: 1px;
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
 }
 
 .inline-icon {
   --size: #{rem(30)};
   --gap: #{rem(10)};
-  align-items: center;
-  column-gap: var(--gap);
 
   display: inline-flex;
+  column-gap: var(--gap);
+  align-items: center;
 
   &::after {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    content: "";
     flex-shrink: 0;
-    height: var(--size);
     // background-image: url(""); // inline svg
 
     width: var(--size);
+    height: var(--size);
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 }

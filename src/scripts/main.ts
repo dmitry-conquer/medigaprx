@@ -5,6 +5,8 @@ import Header from "./components/header";
 import Slider from "./components/slider";
 import BackTopButton from "./components/back-top";
 import Lenis from "lenis";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "lenis/dist/lenis.css";
 
 declare const acfData: {
@@ -26,6 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const backTopButton = new BackTopButton();
   backTopButton.init();
+
+  AOS.init({
+    once: true,
+    duration: 700,
+  });
 
   if (typeof acfData !== "undefined" && acfData.smoothScroll) {
     new Lenis({

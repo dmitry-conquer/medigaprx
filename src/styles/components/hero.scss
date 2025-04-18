@@ -2,28 +2,23 @@
 
 .hero {
   &__inner {
-    padding-bottom: fluid(0, 180);
-    padding-top: fluid(120, 300);
     position: relative;
-    @include large {
-      padding-top: rem(170);
-    }
+    padding-top: fluid(120, 300);
+    padding-bottom: fluid(0, 180);
+
     @include medium {
       padding-bottom: 0;
-    }
-    @include x-small {
-      padding-top: rem(120);
     }
   }
 
   &__content {
-    max-width: 52%;
     position: relative;
     z-index: 3;
+    max-width: 52%;
 
     p:has(strong) {
-      font-size: fluid(18, 24) !important;
       margin-bottom: fluid(12, 16) !important;
+      font-size: fluid(18, 24) !important;
     }
     @include medium {
       max-width: 100%;
@@ -35,17 +30,17 @@
   }
 
   &__image {
-    border-radius: 0 rem(60) rem(60);
-    max-width: 46%;
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
+    max-width: 46%;
+    border-radius: 0 rem(60) rem(60);
 
     &_mobile {
-      display: block;
-      max-width: 100%;
       position: relative;
       z-index: 1;
+      display: block;
+      max-width: 100%;
       @include above-medium {
         display: none;
       }
@@ -56,15 +51,15 @@
   }
 
   &__vector {
-    left: 19%;
     position: absolute;
     top: 0;
-    width: fluid(200, 827);
+    left: 19%;
     z-index: 2;
+    width: fluid(200, 827);
 
     &_mobile {
-      display: block;
       left: 0;
+      display: block;
       width: 100%;
       @include above-medium {
         display: none;

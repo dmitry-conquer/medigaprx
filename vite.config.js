@@ -1,7 +1,6 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import handlebars from "vite-plugin-handlebars";
-import viteJoinMediaQueries from "vite-join-media-queries";
 
 export default defineConfig({
   css: {
@@ -29,7 +28,6 @@ export default defineConfig({
     },
   },
   plugins: [
-    viteJoinMediaQueries(),
     handlebars({
       partialDirectory: resolve(__dirname, "partials"),
     }),

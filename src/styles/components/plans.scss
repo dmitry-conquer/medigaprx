@@ -2,8 +2,8 @@
 
 .plans {
   &__title {
-    margin-inline: rem(15);
     padding-inline: calc((100% - rem(1550)) / 2);
+    margin-inline: rem(15);
   }
 }
 
@@ -19,9 +19,9 @@
   }
 
   &__header {
+    width: 100%;
     padding-inline: calc((100% - rem(1550)) / 2);
     transition: background-color 0.3s ease;
-    width: 100%;
 
     &.is-active {
       background-color: var(--color-secondary-light);
@@ -41,17 +41,17 @@
   }
 
   &__header-inner {
-    border-bottom: rem(3) solid var(--color-secondary-light);
     display: grid;
-    gap: rem(10) rem(20);
     grid-template-columns: 37% 1fr rem(60);
-    margin-inline: rem(15);
+    gap: rem(10) rem(20);
     padding: fluid(25, 32) 0;
+    margin-inline: rem(15);
+    border-bottom: rem(3) solid var(--color-secondary-light);
     transition: all 0.3s ease;
     @include small {
-      align-items: center;
-      grid-template-columns: 1fr rem(40);
       grid-template-rows: repeat(2, auto);
+      grid-template-columns: 1fr rem(40);
+      align-items: center;
     }
   }
 
@@ -63,39 +63,39 @@
   }
 
   &__text {
+    width: 100%;
     line-height: 1.3;
     text-align: left;
-    width: 100%;
 
     &-inner {
       max-width: rem(478);
     }
     @include small {
-      grid-column: 1 / 3;
       grid-row: 2 / 3;
+      grid-column: 1 / 3;
     }
   }
 
   &__icon {
+    position: relative;
     align-self: center;
-    border: rem(3) solid var(--color-primary);
-    border-radius: 50%;
+    width: 100%;
     height: rem(60);
     margin-left: auto;
-    position: relative;
+    border: rem(3) solid var(--color-primary);
+    border-radius: 50%;
     transition: all 0.3s ease;
-    width: 100%;
 
     span {
-      background-color: var(--color-primary);
-      border-radius: rem(20);
-      height: rem(5);
-      left: 50%;
       position: absolute;
       top: 50%;
+      left: 50%;
+      width: rem(24);
+      height: rem(5);
+      background-color: var(--color-primary);
+      border-radius: rem(20);
       transform: translate(-50%, -50%);
       transition: all 0.3s ease;
-      width: rem(24);
 
       &.hor {
       }
@@ -104,20 +104,20 @@
         transform: translate(-50%, -50%) rotate(90deg);
       }
       @include small {
-        height: rem(2);
         width: rem(14);
+        height: rem(2);
       }
     }
     @include small {
-      border: rem(2) solid var(--color-primary);
       height: rem(40);
+      border: rem(2) solid var(--color-primary);
     }
   }
 
   &__content {
     max-height: 0;
-    overflow: hidden;
     padding-inline: calc((100% - rem(1550)) / 2);
+    overflow: hidden;
     transition: max-height 0.3s ease;
     will-change: auto;
   }
