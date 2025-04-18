@@ -15,8 +15,8 @@
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
-  border-radius: 37px;
   border: 4px solid #ecf6e8;
+  border-radius: 37px;
 }
 
 @supports not selector(::-webkit-scrollbar) {

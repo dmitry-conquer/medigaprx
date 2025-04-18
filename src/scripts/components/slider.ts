@@ -3,7 +3,6 @@ import Swiper, { Autoplay } from "swiper";
 import "swiper/swiper-bundle.css";
 
 export default class Slider {
-  private stepsSlider: Swiper | null = null;
   private partnersSlider: Swiper | null = null;
 
   private stepsNodeId: string = "steps-slider";
@@ -18,7 +17,7 @@ export default class Slider {
   private initStepsSlider() {
     const stepsNode = document.getElementById(this.stepsNodeId);
     if (stepsNode) {
-      this.stepsSlider = new Swiper(stepsNode, {
+      new Swiper(stepsNode, {
         slidesPerView: 3,
         spaceBetween: 20,
         speed: 900,

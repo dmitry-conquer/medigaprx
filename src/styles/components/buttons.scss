@@ -7,28 +7,31 @@
     flex-direction: column;
   }
 }
+
 .button {
-  padding: rem(12) rem(32);
-  color: var(--color-white);
   border-radius: rem(8);
-  text-align: center;
+  color: var(--color-white);
   font-size: rem(18);
   font-weight: 500;
   line-height: 1.22;
-  width: 100%;
   max-width: rem(246);
+  padding: rem(12) rem(32);
+  text-align: center;
   transition: opacity 0.3s ease;
+  width: 100%;
+
+  &_primary {
+    background-color: var(--color-primary);
+  }
+
+  &_secondary {
+    background-color: var(--color-secondary);
+  }
 
   @include x-small {
     max-width: 100%;
   }
   @include hover {
     opacity: 0.7;
-  }
-  &_primary {
-    background-color: var(--color-primary);
-  }
-  &_secondary {
-    background-color: var(--color-secondary);
   }
 }

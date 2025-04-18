@@ -25,9 +25,5 @@
   $slope: round-to(math.div(($maxSize - $minSize), ($maxWidth - $minWidth)));
   $yAxisIntersection: round-to(-$minWidth * $slope + $minSize);
 
-  @return clamp(
-    #{$minSize * 1rem}, 
-    #{$yAxisIntersection * 1rem} + #{$slope * 100vw}, 
-    #{$maxSize * 1rem}
-  );
+  @return clamp(#{$minSize * 1rem}, #{$yAxisIntersection * 1rem} + #{$slope * 100vw}, #{$maxSize * 1rem});
 }

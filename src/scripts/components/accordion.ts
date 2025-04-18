@@ -18,11 +18,12 @@ class Accordion {
     ariaSelected: "aria-selected",
   };
   private rootElement: HTMLElement;
-  private buttonElements: NodeListOf<HTMLElement>;
-  private state: indexStateType;
+  private buttonElements!: NodeListOf<HTMLElement>;
+  private state!: indexStateType;
 
   constructor(rootElement: HTMLElement) {
     this.rootElement = rootElement;
+    if (!this.rootElement) return;
     this.buttonElements = this.rootElement.querySelectorAll(this.selectors.button);
     this.state = this.getProxyState({
       activeIndexes: new Set<number>(

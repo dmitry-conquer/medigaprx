@@ -6,12 +6,14 @@
       padding-right: 0;
     }
   }
+
   &__slider {
+    margin-block: rem(-16);
     overflow: hidden;
     padding-block: rem(16);
-    margin-block: rem(-16);
     width: 100%;
   }
+
   &__slider-wrapper {
     display: flex;
     width: 100%;
@@ -19,11 +21,12 @@
 }
 
 .step {
-  flex-shrink: 0;
-  box-shadow: var(--shadow);
-  overflow: hidden;
   border-bottom-left-radius: rem(32);
   border-bottom-right-radius: rem(32);
+  box-shadow: var(--shadow);
+  flex-shrink: 0;
+  overflow: hidden;
+
   &:nth-child(1) {
     .step__image {
       border-top-left-radius: rem(32);
@@ -36,6 +39,7 @@
       }
     }
   }
+
   &:nth-child(2) {
     .step__image {
       height: rem(317);
@@ -47,6 +51,7 @@
       }
     }
   }
+
   &:nth-child(3) {
     .step__image {
       border-top-right-radius: rem(32);
@@ -59,80 +64,89 @@
       }
     }
   }
+
   &__image {
-    width: 100%;
     object-fit: cover;
     object-position: center;
+    width: 100%;
   }
-  &__body {
-  }
+
   &__body-inner {
+    background-color: var(--color-primary-light);
     border-bottom-left-radius: rem(32);
     border-bottom-right-radius: rem(32);
-    background-color: var(--color-primary-light);
     padding: fluid(16, 24);
     position: relative;
     z-index: 2;
   }
+
   &__title {
     margin-bottom: rem(16);
   }
+
   &__row {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    display: flex;
     flex-wrap: wrap;
     gap: rem(16);
+    justify-content: space-between;
   }
+
   &__number {
   }
+
   &__button {
-    font-weight: 700;
-    display: flex;
     align-items: center;
     column-gap: rem(6);
-    transition: box-shadow 0.3s ease;
+    display: flex;
+    font-weight: 700;
     padding: rem(3);
     transition: color 0.3s ease;
-    @include hover {
-      color: var(--color-secondary);
-    }
+
     &::before {
-      content: "";
-      width: fluid(16, 24);
-      height: fluid(16, 24);
       background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M12%204C12%203.44772%2011.5523%203%2011%203C10.4477%203%2010%203.44772%2010%204L12%204ZM10.2929%2020.7071C10.6834%2021.0976%2011.3166%2021.0976%2011.7071%2020.7071L18.0711%2014.3431C18.4616%2013.9526%2018.4616%2013.3195%2018.0711%2012.9289C17.6805%2012.5384%2017.0474%2012.5384%2016.6569%2012.9289L11%2018.5858L5.34315%2012.9289C4.95262%2012.5384%204.31946%2012.5384%203.92893%2012.9289C3.53841%2013.3195%203.53841%2013.9526%203.92893%2014.3431L10.2929%2020.7071ZM10%204L10%2020L12%2020L12%204L10%204Z%22%20fill%3D%22%2321A0BE%22%2F%3E%3C%2Fsvg%3E");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+      content: "";
+      height: fluid(16, 24);
+      width: fluid(16, 24);
+    }
+    @include hover {
+      color: var(--color-secondary);
     }
   }
 
   &__description-wrapper {
-    max-height: 0;
-    transition: max-height 0.4s ease;
-    overflow: hidden;
-    will-change: auto;
     border-bottom-left-radius: rem(32);
     border-bottom-right-radius: rem(32);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    will-change: auto;
   }
+
   &__description-outer {
-    padding: rem(55) 0 fluid(20, 40) 0;
     margin-top: rem(-40);
+    padding: rem(55) 0 fluid(20, 40);
   }
+
   &__description {
-    margin: 0 fluid(16, 24);
-    padding-right: rem(32);
-    height: rem(413);
-    overflow: auto;
     font-size: rem(16);
+    height: rem(360);
     line-height: 1.4;
+    margin: 0 fluid(16, 24);
+    overflow: auto;
+    padding-right: rem(32);
+
     ul:not(:last-of-type) {
       margin-bottom: fluid(16, 28);
     }
+
     ul {
       list-style-type: disc;
       padding-left: rem(20);
+
       li {
         &::marker {
           font-size: rem(12);

@@ -1,0 +1,9 @@
+@use "../helpers/" as *;
+
+.acc-content {
+  margin-block: fluid(18, 32);
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

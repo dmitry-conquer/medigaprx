@@ -1,0 +1,38 @@
+@use "../helpers/" as *;
+
+.acc-list {
+  background-color: var(--color-light);
+  border-radius: 0 rem(24) rem(24) rem(4);
+  margin-left: rem(-24);
+
+  padding: rem(24);
+  padding-left: rem(24);
+
+  ul {
+    li {
+      column-gap: rem(12);
+      display: flex;
+      font-weight: bold;
+      line-height: 1.2;
+
+      &:not(:last-child) {
+        margin-bottom: fluid(8, 18);
+      }
+
+      &::before {
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2222%22%20height%3D%2216%22%20viewBox%3D%220%200%2022%2016%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M21.176%201.94064C21.152%201.44163%2020.912%200.990144%2020.552%200.65747C20.192%200.324797%2019.712%200.158461%2019.208%200.205985C18.704%200.229748%2018.248%200.467371%2017.936%200.823807L8.33596%2011.5169L3.94396%207.57232C3.58396%207.23965%203.10396%207.07331%202.59996%207.09707C2.09596%207.12084%201.63996%207.3347%201.32796%207.69113C0.991959%208.04757%200.823959%208.52282%200.847959%209.02183C0.871959%209.52084%201.08796%209.97232%201.44796%2010.2812L7.23196%2015.4852C7.56796%2015.7941%208.02396%2015.9604%208.47996%2015.9604H8.57596H8.59996C9.07996%2015.9367%209.53596%2015.7228%209.89596%2015.3426L20.744%203.24757C21.032%202.89113%2021.2%202.41589%2021.176%201.94064Z%22%20fill%3D%22%236DBF46%22%2F%3E%3C%2Fsvg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+        flex: 0 0 fluid(13, 20);
+        height: fluid(13, 20);
+        margin-top: rem(2);
+      }
+    }
+  }
+
+  @include small {
+    margin-right: rem(-24);
+  }
+}

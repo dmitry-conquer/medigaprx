@@ -3,55 +3,95 @@
 .partners {
   background-color: var(--color-light);
   border-radius: rem(100) rem(100) 0 0;
-  @include medium {
-    border-radius: 0;
+  padding-bottom: fluid(40, 180);
+  position: relative;
+
+  &__inner {
+    position: relative;
+    z-index: 2;
   }
+
+  &__vector {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    z-index: 1;
+
+    &_left {
+      bottom: rem(20);
+      left: 0;
+    }
+
+    &_right {
+      bottom: fluid(30, 130);
+      right: 0;
+    }
+  }
+
   &__header {
+    margin-bottom: fluid(45, 75);
     text-align: center;
+
+    h3 {
+      margin-bottom: 0;
+    }
   }
+
   &__list {
     transition-timing-function: linear;
   }
+
   &__item {
-    width: fluid(120, 200) !important;
     height: rem(50) !important;
     object-fit: contain;
+    width: fluid(120, 190) !important;
   }
+
   &__body {
-    margin-top: fluid(60, 180);
-    display: flex;
     align-items: center;
+    display: flex;
     gap: rem(34) fluid(34, 217);
+    margin-top: fluid(60, 180);
     @include large {
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
     }
   }
+
   &__image {
     border-radius: rem(60);
     overflow: hidden;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
     @include medium {
       border-radius: rem(16);
     }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
+
   &__content {
     flex: 0 1 rem(535);
-    @include large {
-      flex: 0 1 auto;
-    }
+
     h2 {
       text-transform: uppercase;
     }
+
     h3 {
-      margin-bottom: rem(16);
+      margin-bottom: rem(24);
+    }
+    @include large {
+      flex: 0 1 auto;
     }
   }
+
   &__buttons {
     flex-wrap: wrap;
+  }
+  @include medium {
+    border-radius: 0;
   }
 }

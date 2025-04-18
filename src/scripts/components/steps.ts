@@ -13,11 +13,14 @@ class Steps {
     isActive: "is-active",
   };
   private rootElement: HTMLElement;
-  private buttonElements: NodeListOf<HTMLElement>;
-  private state: indexStateType;
+  private buttonElements!: NodeListOf<HTMLElement>;
+  private state!: indexStateType;
 
   constructor() {
     this.rootElement = document.querySelector(this.selectors.root) as HTMLElement;
+
+    if (!this.rootElement) return;
+
     this.buttonElements = this.rootElement.querySelectorAll(this.selectors.button);
     this.state = this.getProxyState({
       activeIndexes: new Set(

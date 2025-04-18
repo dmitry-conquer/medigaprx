@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const backTopButton = new BackTopButton();
   backTopButton.init();
 
-  if (acfData.smoothScroll) {
+  if (typeof acfData !== "undefined" && acfData.smoothScroll) {
     new Lenis({
       autoRaf: true,
       anchors: true,

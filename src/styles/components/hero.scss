@@ -2,8 +2,8 @@
 
 .hero {
   &__inner {
-    padding-top: fluid(120, 300);
     padding-bottom: fluid(0, 180);
+    padding-top: fluid(120, 300);
     position: relative;
     @include large {
       padding-top: rem(170);
@@ -15,49 +15,53 @@
       padding-top: rem(120);
     }
   }
+
   &__content {
     max-width: 52%;
     position: relative;
     z-index: 3;
+
     p:has(strong) {
-      margin-bottom: fluid(12, 16) !important;
       font-size: fluid(18, 24) !important;
+      margin-bottom: fluid(12, 16) !important;
     }
     @include medium {
       max-width: 100%;
     }
   }
+
   &__buttons {
     margin-top: fluid(12, 40);
   }
+
   &__image {
+    border-radius: 0 rem(60) rem(60);
+    max-width: 46%;
     position: absolute;
     right: 0;
     top: 0;
-    max-width: 46%;
-    border-radius: 0px rem(60) rem(60) rem(60);
-    @include medium {
-      display: none;
-    }
+
     &_mobile {
       display: block;
-      position: relative;
       max-width: 100%;
+      position: relative;
       z-index: 1;
       @include above-medium {
         display: none;
       }
     }
-  }
-  &__vector {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 19%;
-    width: fluid(200, 827);
     @include medium {
       display: none;
     }
+  }
+
+  &__vector {
+    left: 19%;
+    position: absolute;
+    top: 0;
+    width: fluid(200, 827);
+    z-index: 2;
+
     &_mobile {
       display: block;
       left: 0;
@@ -65,6 +69,9 @@
       @include above-medium {
         display: none;
       }
+    }
+    @include medium {
+      display: none;
     }
   }
 }

@@ -3,10 +3,12 @@
 @use "variables";
 @use "utils";
 @use "globals";
+@use "typography";
 @use "helpers" as *;
 
 // Importing components
 @use "components/buttons";
+@use "components/base-page";
 @use "components/back-top";
 @use "components/hero";
 @use "components/grid";
@@ -15,6 +17,9 @@
 @use "components/plans";
 @use "components/acc-default";
 @use "components/acc-grid";
-@use './components/footer';
-@use './components/header';
-@use './components/partners';
+@use "./components/footer";
+@use "./components/header";
+@use "./components/partners";
+@use "./components/acc-details";
+@use "./components/acc-content";
+@use "./components/acc-list";

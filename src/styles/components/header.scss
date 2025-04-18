@@ -1,94 +1,101 @@
 @use "../helpers/" as *;
 
 .header {
+  padding-top: fluid(16, 48);
   position: absolute;
   width: 100%;
   z-index: 9999;
-  padding-top: fluid(16, 48);
-  @include medium {
-    box-shadow: var(--shadow);
-    border-radius: 0px 0px 32px 32px;
-    background-color: var(--color-white);
-    padding-bottom: rem(16);
-  }
+
   &__container {
-    display: flex;
     align-items: center;
     column-gap: rem(60);
+    display: flex;
     @include medium {
       justify-content: space-between;
     }
   }
+
   &__logo-wrapper {
+    flex-shrink: 0;
+    max-width: fluid(142, 196);
     position: relative;
     z-index: 101;
-    max-width: fluid(142, 196);
-    flex-shrink: 0;
   }
+
   &__logo {
-    width: 100%;
     height: 100%;
     object-fit: contain;
+    width: 100%;
   }
+
   &__nav {
     @include medium {
       display: none;
     }
   }
+
   &__nav-list {
-    display: flex;
     align-items: center;
+    display: flex;
     gap: rem(16) rem(32);
   }
+
   &__nav-item {
   }
+
   &__nav-link {
     font-size: rem(18);
-    line-height: 1.22;
     font-weight: 500;
+    line-height: 1.22;
     position: relative;
+
     &::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: rem(2);
       background-color: var(--color-primary);
-      top: calc(100% + rem(6));
+      content: "";
+      height: rem(2);
       left: 50%;
+      position: absolute;
+      top: calc(100% + rem(6));
       transform: translateX(-50%);
       transition: all 0.3s ease;
+      width: 0;
     }
+
     &:hover {
       &::after {
         width: 100%;
       }
     }
   }
+
   &__button {
-    position: relative;
-    z-index: 101;
-    width: rem(40);
-    height: rem(40);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: rem(40);
+    justify-content: center;
+    position: relative;
     row-gap: rem(6);
+    width: rem(40);
+    z-index: 101;
+
     span {
-      width: rem(30);
-      height: rem(3);
       background-color: var(--color-dark);
       border-radius: rem(50);
+      height: rem(3);
       transition:
         transform 0.3s ease,
         opacity 0.3s ease,
         background-color 0.3s ease;
+      width: rem(30);
     }
+
     &.is-active {
       span:nth-child(1) {
         transform: rotate(45deg) translateY(rem(6));
       }
+
       span:nth-child(2) {
         transform: rotate(-45deg) translateY(rem(-6));
       }
@@ -97,68 +104,79 @@
       display: none;
     }
   }
+  @include medium {
+    background-color: var(--color-white);
+    border-radius: 0 0 32px 32px;
+    box-shadow: var(--shadow);
+    padding-bottom: rem(16);
+  }
 }
 
 .header-overlay {
-  z-index: 100;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
   background-color: var(--color-white);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: rem(183) rem(15) 0 rem(15);
-  transition: transform 0.3s ease;
+  height: 100%;
   overflow: auto;
+  padding: rem(183) rem(15) 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: transform 0.3s ease;
+  width: 100%;
+  z-index: 100;
 
   &:not(.is-active) {
     transform: translateX(100%);
   }
 
-  @include above-medium {
-    display: none;
-  }
   &__inner {
     display: flex;
     flex-direction: column;
     height: 100%;
   }
+
   &__nav {
     flex-grow: 1;
     margin-bottom: rem(40);
   }
+
   &__nav-list {
   }
+
   &__nav-item {
     &:not(:last-child) {
       margin-bottom: rem(36);
     }
   }
+
   &__nav-link {
     font-size: rem(28);
     font-weight: 700;
     line-height: 1.14;
   }
+
   &__buttons {
-    margin-top: auto;
     justify-content: center;
     margin-bottom: rem(24);
+    margin-top: auto;
   }
+
   &__footer {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: rem(12) rem(40);
+    justify-content: center;
     padding-bottom: rem(30);
   }
+
   &__contacts {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     row-gap: rem(8);
+
     a {
       transition: color 0.3s ease;
       @include hover {
@@ -166,28 +184,37 @@
       }
     }
   }
+
   &__contacts-number {
     font-size: rem(28);
     font-weight: 700;
     line-height: 1.14;
   }
+
   &__contacts-email {
     font-size: rem(16);
     line-height: 1.4;
   }
+
   &__socials {
     display: flex;
     gap: rem(8) rem(24);
   }
+
   &__socials-link {
-    flex-shrink: 0;
     background-color: var(--color-white);
     border-radius: 100%;
-    width: fluid(40, 60);
+    flex-shrink: 0;
     height: fluid(40, 60);
+    width: fluid(40, 60);
   }
+
   &__socials-icon {
-    width: 100%;
     height: 100%;
+    width: 100%;
+  }
+
+  @include above-medium {
+    display: none;
   }
 }

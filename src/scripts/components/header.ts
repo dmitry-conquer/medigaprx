@@ -10,12 +10,14 @@ export class Header {
     isLock: "is-lock",
   };
 
-  private rootElement: HTMLElement | null;
-  private overlayElement: HTMLElement | null;
-  private triggerButtonElement: HTMLElement | null;
+  private rootElement: HTMLElement | null = null;
+  private overlayElement: HTMLElement | null = null;
+  private triggerButtonElement: HTMLElement | null = null;
 
   constructor() {
     this.rootElement = document.querySelector(this.selectors.root);
+
+    if (!this.rootElement) return;
     this.overlayElement = this.rootElement?.querySelector(this.selectors.overlay) || null;
     this.triggerButtonElement = this.rootElement?.querySelector(this.selectors.triggerButton) || null;
   }
