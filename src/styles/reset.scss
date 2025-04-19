@@ -264,8 +264,8 @@ Remove the inner padding in Chrome and Safari on macOS.
 Add the correct display in Chrome and Safari.
 */
 
-summary {
-  display: list-item;
+details summary::-webkit-details-marker {
+  display: none;
 }
 
 /*

@@ -133,10 +133,10 @@
 
   &__description {
     height: rem(360);
-    padding-right: rem(32);
+    padding-right: fluid(24, 32);
     margin: 0 fluid(16, 24);
     overflow: auto;
-    font-size: rem(16);
+    font-size: fluid(16, 18);
     line-height: 1.4;
 
     ul:not(:last-of-type) {

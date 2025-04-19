@@ -119,8 +119,15 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    width: auto;
+    height: auto;
+
+    @include medium {
+      width: rem(70);
+      height: rem(70);
+    }
     @include small {
-      width: rem(60);
+      width: rem(45);
     }
   }
 
