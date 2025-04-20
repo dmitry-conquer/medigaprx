@@ -132,7 +132,7 @@
   }
 
   &__description {
-    height: rem(360);
+    max-height: rem(360);
     padding-right: fluid(24, 32);
     margin: 0 fluid(16, 24);
     overflow: auto;

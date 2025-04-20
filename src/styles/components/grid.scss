@@ -121,6 +121,7 @@
     bottom: 0;
     width: auto;
     height: auto;
+    z-index: 1;
 
     @include medium {
       width: rem(70);

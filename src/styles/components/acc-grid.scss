@@ -6,10 +6,19 @@
   gap: fluid(16, 32) rem(20);
   padding: fluid(24, 32) rem(15);
 
+  @include small {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: rem(470)) {
+    grid-template-columns: 1fr;
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    height: 100%;
   }
 
   &__item-image {
@@ -18,6 +27,8 @@
     margin-bottom: fluid(16, 24);
     object-fit: cover;
     border-radius: rem(24);
+    flex-grow: 1;
+
     @media (max-width: rem(470)) {
       height: rem(200);
     }
@@ -28,12 +39,6 @@
     font-size: fluid(16, 24);
   }
 
-  &__item-text {
-  }
-  @include small {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: rem(470)) {
-    grid-template-columns: 1fr;
-  }
+  &__item-text {}
+
 }
