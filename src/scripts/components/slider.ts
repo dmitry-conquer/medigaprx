@@ -52,11 +52,9 @@ export default class Slider {
         speed: 4000,
         autoplay: {
           delay: 5,
-          disableOnInteraction: false,
         },
         slidesPerView: "auto",
         loop: true,
-        allowTouchMove: false,
         breakpoints: {
           0: {
             spaceBetween: 20,
