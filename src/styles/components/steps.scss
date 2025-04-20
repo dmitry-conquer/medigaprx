@@ -1,9 +1,13 @@
 @use "../helpers/" as *;
 
 .steps {
+  h2 {
+    padding: 0 rem(16);
+  }
+
   &__container {
     @media (max-width: 1200px) {
-      padding-right: 0;
+      padding: 0;
     }
   }
 
@@ -12,11 +16,27 @@
     padding-block: rem(16);
     margin-block: rem(-16);
     overflow: hidden;
+    padding-inline: rem(16);
   }
 
   &__slider-wrapper {
     display: flex;
     width: 100%;
+  }
+
+  &__pagination {
+    position: static;
+    margin-top: rem(24);
+    .swiper-pagination-bullet {
+      width: rem(10);
+      height: rem(10);
+      opacity: 0.3 !important;
+      border: rem(2) solid var(--color-dark) !important;
+      background-color: transparent;
+      &.swiper-pagination-bullet-active {
+        background-color: var(--color-dark);
+      }
+    }
   }
 }
 
@@ -33,9 +53,10 @@
       border-top-left-radius: rem(32);
       @include small {
         height: rem(240);
+        border-top-left-radius: rem(16);
       }
       @include x-small {
-        height: rem(200);
+        height: rem(175);
       }
     }
   }
@@ -47,7 +68,7 @@
         height: rem(240);
       }
       @include x-small {
-        height: rem(200);
+        height: rem(175);
       }
     }
   }
@@ -57,10 +78,11 @@
       height: rem(221);
       border-top-right-radius: rem(32);
       @include small {
+        border-top-right-radius: rem(16);
         height: rem(240);
       }
       @include x-small {
-        height: rem(200);
+        height: rem(175);
       }
     }
   }
@@ -74,7 +96,7 @@
   &__body-inner {
     position: relative;
     z-index: 2;
-    padding: fluid(16, 24);
+    padding: fluid(16, 24) fluid(12, 24);
     background-color: var(--color-primary-light);
     border-bottom-right-radius: rem(32);
     border-bottom-left-radius: rem(32);
@@ -90,9 +112,6 @@
     gap: rem(16);
     align-items: center;
     justify-content: space-between;
-  }
-
-  &__number {
   }
 
   &__button {
@@ -141,6 +160,10 @@
 
     ul:not(:last-of-type) {
       margin-bottom: fluid(16, 28);
+    }
+
+    a:not([class]) {
+      text-decoration: underline;
     }
 
     ul {

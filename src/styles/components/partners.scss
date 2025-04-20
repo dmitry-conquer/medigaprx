@@ -17,6 +17,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    width: auto;
+    height: auto;
 
     &_left {
       bottom: rem(20);
@@ -77,15 +79,20 @@
   &__content {
     flex: 0 1 rem(535);
 
+    @include large {
+      flex: 0 1 auto;
+    }
+
+    @include x-small {
+      text-align: center !important;
+    }
+
     h2 {
       text-transform: uppercase;
     }
 
     h3 {
       margin-bottom: rem(24);
-    }
-    @include large {
-      flex: 0 1 auto;
     }
   }
 

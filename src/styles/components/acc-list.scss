@@ -13,6 +13,7 @@
       column-gap: rem(9);
       font-weight: bold;
       line-height: 1.2;
+      font-size: fluid(16, 24);
 
       &:not(:last-child) {
         margin-bottom: fluid(8, 18);

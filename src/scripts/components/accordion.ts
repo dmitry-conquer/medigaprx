@@ -15,7 +15,6 @@ class Accordion {
   };
   private readonly stateAttributes: Record<string, string> = {
     ariaExpanded: "aria-expanded",
-    ariaSelected: "aria-selected",
   };
   private rootElement: HTMLElement;
   private buttonElements!: NodeListOf<HTMLElement>;
@@ -51,6 +50,10 @@ class Accordion {
     this.buttonElements.forEach((buttonElement, index: number) => {
       buttonElement?.addEventListener("click", () => this.onButtonClick(index));
     });
+
+    window.addEventListener("resize", () => {
+      this.updateUI();
+    });
   }
 
   private getProxyState(state: indexStateType) {
@@ -74,7 +77,7 @@ class Accordion {
 
       buttonElement.classList.toggle(this.stateClasses.isActive, isActive);
       buttonElement.setAttribute(this.stateAttributes.ariaExpanded, isActive.toString());
-      buttonElement.setAttribute(this.stateAttributes.ariaSelected, isActive.toString());
+      content.classList.toggle(this.stateClasses.isActive, isActive);
       content.style.maxHeight = isActive ? `${content.scrollHeight}px` : "";
     });
   }

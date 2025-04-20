@@ -11,11 +11,10 @@
   &:first-child {
     .plan__header-inner {
       border-top: rem(3) solid var(--color-secondary-light);
+      @include small {
+        border-top: rem(2) solid var(--color-secondary-light);
+      }
     }
-  }
-
-  &:not(:last-child) {
-    margin-bottom: rem(18);
   }
 
   &__header {
@@ -52,6 +51,7 @@
       grid-template-rows: repeat(2, auto);
       grid-template-columns: 1fr rem(40);
       align-items: center;
+      border-bottom: rem(2) solid var(--color-secondary-light);
     }
   }
 
@@ -120,8 +120,8 @@
     overflow: hidden;
     transition: max-height 0.3s ease;
     will-change: auto;
-  }
-
-  &__content-inner {
+    &.is-active {
+      margin-bottom: rem(18);
+    }
   }
 }

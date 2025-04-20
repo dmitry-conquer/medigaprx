@@ -1,6 +1,5 @@
 //@ts-expect-error expected error
-import Swiper, { Autoplay } from "swiper";
-import "swiper/swiper-bundle.css";
+import Swiper, { Autoplay, Pagination } from "swiper";
 
 export default class Slider {
   private partnersSlider: Swiper | null = null;
@@ -18,12 +17,17 @@ export default class Slider {
     const stepsNode = document.getElementById(this.stepsNodeId);
     if (stepsNode) {
       new Swiper(stepsNode, {
+        modules: [Pagination],
         slidesPerView: 3,
         spaceBetween: 20,
         speed: 900,
+        pagination: {
+          el: ".steps__pagination",
+          clickable: true,
+        },
         breakpoints: {
           0: {
-            slidesPerView: 1.3,
+            slidesPerView: 1.35,
           },
           600: {
             slidesPerView: 1.8,

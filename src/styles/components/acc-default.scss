@@ -3,10 +3,22 @@
 .acc-default {
   display: flex;
 
+  &_increase-fz {
+    .acc-default__list ul li {
+      font-size: fluid(16, 24);
+    }
+  }
+
+  &_no-rounded {
+    .acc-default__list.acc-default__list_bg::before {
+      border-bottom-right-radius: 0;
+    }
+  }
+
   &__list {
     position: relative;
     flex: 0 1 37%;
-    padding: fluid(24, 32) fluid(15, 111) fluid(24, 32) rem(36);
+    padding: fluid(24, 32) fluid(15, 111) fluid(24, 32) rem(16);
 
     &_bg {
       &::before {
@@ -18,13 +30,19 @@
         height: 100%;
         content: "";
         background-color: var(--color-primary-light);
+        border-bottom-right-radius: rem(24);
+
+        @include small {
+          border-bottom-right-radius: 0;
+        }
       }
     }
 
     ul {
+      padding-left: rem(20);
       li {
         position: relative;
-        font-size: fluid(16, 24);
+        font-size: fluid(16, 20);
         line-height: 1.25;
 
         &:not(:last-child) {
@@ -59,6 +77,7 @@
       margin: fluid(20, 60) 0 rem(20);
     }
   }
+
   @include small {
     flex-direction: column;
   }
