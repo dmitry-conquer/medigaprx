@@ -197,4 +197,13 @@
     padding-top: rem(24);
     border-top: rem(3) solid var(--color-white);
   }
+
+  &__disclaimer {
+    margin-top: rem(16);
+    font-size: fluid(14, 16);
+    opacity: 0.7;
+    a {
+      text-decoration: underline;
+    }
+  }
 }
