@@ -47,8 +47,8 @@
 
   &__item {
     width: fluid(120, 190) !important;
-    height: rem(50) !important;
     object-fit: contain;
+    aspect-ratio: 16 / 9;
   }
 
   &__body {
