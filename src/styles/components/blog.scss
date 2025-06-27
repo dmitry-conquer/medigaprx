@@ -1,5 +1,28 @@
 @use "../helpers/" as *;
+
+.blog-dec-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+}
+.blog-dec-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  transform: translateY(-72%) translateX(-50%);
+
+  @include x-large {
+    display: none;
+  }
+}
+
 .blog-container {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: auto rem(345);
   gap: rem(80) fluid(0, 150);
@@ -97,9 +120,6 @@
   }
 }
 
-.blog-pagination {
-}
-
 .sidebar {
   padding: rem(40);
   background-color: var(--color-secondary-light);
@@ -128,5 +148,34 @@
     @include hover {
       color: var(--color-primary);
     }
+  }
+}
+
+.blog-pagination {
+  margin-top: fluid(40, 120);
+  .navigation {
+  }
+  .pagination {
+  }
+  .screen-reader-text {
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(16);
+  }
+  .page-numbers {
+    font-size: rem(20) !important;
+  }
+  .current {
+    color: var(--color-primary);
+  }
+  .next {
+    padding-left: rem(8);
+  }
+  .prev {
+    padding-left: rem(8);
+    transform: rotate(180deg);
   }
 }

@@ -11,5 +11,6 @@
   "bracketSameLine": false,
   "jsxSingleQuote": false,
   "quoteProps": "as-needed",
+  "htmlWhitespaceSensitivity": "ignore",
   "semi": true
 }
