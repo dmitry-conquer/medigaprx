@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single</title>
+  </head>
+  <body id="top">
+    <div class="wrapper">
+      {{> header}}
+      <main>
+        <div class="base-page base-page--default">
+          <div class="container blog-container">
+            <article class="single-article">
+              <h1 class="single-article__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+              <div class="single-article__content prose">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget mauris sit amet turpis lacinia
+                  vehicula. Sed dictum lacinia erat, eget porttitor tortor malesuada ac. Donec ut l lacinia vehicula.
+                  Sed dictum lacinia erat, eget porttitor tortor malesuada ac. Donec ut l lacinia vehicula.
+                </p>
+                <img src="https://images.pexels.com/photos/32730389/pexels-photo-32730389.jpeg" alt="Blog Image" />
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget mauris sit amet turpis lacinia
+                  vehicula. Sed dictum lacinia erat, eget porttitor tortor malesuada ac. Donec ut l lacinia vehicula.
+                  Sed dictum lacinia erat, eget porttitor tortor malesuada ac. Donec ut l lacinia vehicula.
+                </p>
+              </div>
+            </article>
+            <aside class="sidebar">
+              <div class="sidebar__item">
+                <h2 class="sidebar__item-title">Recent Posts</h2>
+                <ul class="sidebar__item-list">
+                  <li class="sidebar__item-item">
+                    <a href="#" class="sidebar__item-link">Lorem ipsum dolor sit amet</a>
+                  </li>
+                  <li class="sidebar__item-item">
+                    <a href="#" class="sidebar__item-link">Lorem ipsum dolor sit amet</a>
+                  </li>
+                  <li class="sidebar__item-item">
+                    <a href="#" class="sidebar__item-link">Lorem ipsum dolor sit amet</a>
+                  </li>
+                  <li class="sidebar__item-item">
+                    <a href="#" class="sidebar__item-link">Lorem ipsum dolor sit amet</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="sidebar__item">
+                <h2 class="sidebar__item-title">Categories</h2>
+                <ul class="sidebar__item-list">
+                  <li class="sidebar__item-item">
+                    <a href="#" class="sidebar__item-link">Lorem ipsum dolor sit amet</a>
+                  </li>
+                  <li class="sidebar__item-item">
+                    <a href="#" class="sidebar__item-link">Lorem ipsum dolor sit amet</a>
+                  </li>
+                  <li class="sidebar__item-item">
+                    <a href="#" class="sidebar__item-link">Lorem ipsum dolor sit amet</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="sidebar__item">
+                <h2 class="sidebar__item-title">Tags</h2>
+                <ul class="sidebar__item-list">
+                  <li class="sidebar__item-item">
+                    <a href="#" class="sidebar__item-link">Lorem ipsum dolor sit amet</a>
+                  </li>
+                  <li class="sidebar__item-item">
+                    <a href="#" class="sidebar__item-link">Lorem ipsum dolor sit amet</a>
+                  </li>
+                  <li class="sidebar__item-item">
+                    <a href="#" class="sidebar__item-link">Lorem ipsum dolor sit amet</a>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </main>
+      {{> footer}}
+    </div>
+
+    <script>
+      const acfData = {
+        smoothScroll: 1,
+      };
+    </script>
+    <script type="module" src="../src/scripts/main.ts" defer></script>
+  </body>
+</html>

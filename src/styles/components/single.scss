@@ -1,0 +1,30 @@
+@use "../helpers/" as *;
+
+.single-article {
+  &__title {
+    font-size: fluid(28, 60);
+  }
+  &__content {
+    &.prose h2 {
+      text-transform: uppercase;
+    }
+    &.prose img {
+      border-radius: fluid(16, 40);
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.sidebar {
+  &__item {
+  }
+  &__item-title {
+  }
+  &__item-list {
+  }
+  &__item-item {
+  }
+  &__item-link {
+  }
+}
