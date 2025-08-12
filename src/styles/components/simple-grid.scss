@@ -1,0 +1,46 @@
+@use "../helpers/" as *;
+
+.simple-grid {
+  &__container {
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(20);
+
+    @include small {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    padding: fluid(16, 40);
+    border-radius: fluid(16, 24);
+    border: 3px solid #ecf6e8;
+    background-color: #fff;
+  }
+
+  &__item-icon {
+    width: fluid(32, 56);
+    height: fluid(32, 56);
+    margin-bottom: rem(24);
+  }
+
+  &__item-title {
+    color: var(--color-dark);
+    font-size: fluid(18, 32);
+    font-weight: 700;
+    line-height: 125%;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  &__item-text {
+    line-height: 1.3;
+  }
+}
