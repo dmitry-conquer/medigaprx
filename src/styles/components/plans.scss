@@ -1,9 +1,15 @@
 @use "../helpers/" as *;
 
 .plans {
-  &__title {
+  &__header {
     padding-inline: calc((100% - rem(1550)) / 2);
     margin-inline: rem(15);
+    margin-bottom: fluid(40, 60);
+  }
+  &__title {
+    margin-bottom: rem(16);
+  }
+  &__text {
   }
 }
 
@@ -14,6 +20,14 @@
       @include small {
         border-top: rem(2) solid var(--color-secondary-light);
       }
+    }
+  }
+
+  &_white {
+    .plan__content,
+    .acc-default__list {
+      padding-block: 0;
+      background-color: #fff;
     }
   }
 

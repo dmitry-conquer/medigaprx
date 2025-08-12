@@ -7,10 +7,15 @@
   z-index: 9999;
 
   &--default {
-    background: var(--color-white);
+    background: #ffffff5b;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
     padding: fluid(16, 32) 0;
     border-radius: 0px 0px 60px 60px;
+
+    @include above-large {
+      box-shadow: none;
+      backdrop-filter: blur(7px);
+    }
   }
 
   &__container {

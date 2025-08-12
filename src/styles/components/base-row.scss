@@ -1,0 +1,32 @@
+@use "../helpers/" as *;
+
+.base-row {
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: fluid(16, 40) rem(40);
+    justify-content: space-between;
+
+    @include medium {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    img {
+      border-radius: rem(16);
+    }
+    @include above-medium {
+      flex: 0 1 rem(768);
+      img {
+        border-radius: rem(60);
+      }
+    }
+  }
+
+  &__content {
+    @include above-medium {
+      flex: 0 1 rem(535);
+    }
+  }
+}

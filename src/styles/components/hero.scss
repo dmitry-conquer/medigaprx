@@ -3,7 +3,7 @@
 .hero {
   &__inner {
     position: relative;
-    padding-top: fluid(120, 300);
+    padding-top: fluid(120, 200);
     padding-bottom: fluid(0, 180);
 
     @include medium {
@@ -58,9 +58,13 @@
   &__vector {
     position: absolute;
     top: 0;
-    left: 19%;
+    left: 22%;
     z-index: 2;
     width: fluid(200, 827);
+
+    @media (max-width: rem(1700)) {
+      left: 15%;
+    }
     @include medium {
       display: none;
     }
@@ -72,6 +76,43 @@
       @include above-medium {
         display: none;
       }
+    }
+  }
+
+  &__features {
+    display: flex;
+    column-gap: rem(10);
+    margin-top: fluid(12, 40);
+  }
+  &__feature {
+    color: var(--color-var);
+    text-align: center;
+    font-size: fluid(16, 28);
+    font-weight: 500;
+    line-height: 1.14;
+    padding: fluid(10, 18) fluid(16, 30);
+    border-radius: rem(24);
+    border: 1px solid #21a0be;
+    max-width: rem(200);
+    width: 100%;
+
+    @include small {
+      max-width: 100%;
+      flex-grow: 1;
+    }
+    br {
+      display: block !important;
+    }
+
+    &:nth-child(1) {
+      background-color: #e7f2f5;
+    }
+    &:nth-child(2) {
+      background-color: #d3ecf2;
+    }
+    &:nth-child(3) {
+      background-color: #ecf6e8;
+      border-color: #6dbf46;
     }
   }
 }

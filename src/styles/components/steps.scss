@@ -1,8 +1,17 @@
 @use "../helpers/" as *;
 
 .steps {
+  &__header {
+    margin-bottom: fluid(40, 60);
+    padding-inline: 1rem;
+  }
+
   h2 {
-    padding: 0 rem(16);
+    margin-bottom: 0;
+    margin-bottom: rem(16);
+  }
+
+  &__text {
   }
 
   &__container {
