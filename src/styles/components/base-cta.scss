@@ -1,0 +1,51 @@
+@use "../helpers" as *;
+
+.base-cta {
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__row {
+    display: flex;
+    gap: fluid(16, 40) rem(40);
+    align-items: center;
+    justify-content: space-between;
+
+    @include medium {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    @include above-medium {
+      flex: 0 1 rem(493);
+    }
+  }
+
+  &__content {
+    @include above-medium {
+      flex: 0 1 rem(810);
+    }
+  }
+
+  &__content-text {
+    p:not(:last-child) {
+      margin-bottom: fluid(16, 24);
+    }
+  }
+
+  &__content-buttons {
+    display: flex;
+    gap: rem(12) rem(16);
+    margin-top: fluid(16, 24);
+
+    @include medium {
+      justify-content: center;
+    }
+    @include x-small {
+      flex-direction: column;
+    }
+  }
+}
