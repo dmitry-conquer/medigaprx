@@ -1,10 +1,19 @@
 @use "../helpers" as *;
 
 .base-cta {
-  &__container {
-  }
+  position: relative;
+  margin-bottom: fluid(0, 80);
+  &__background {
+    position: absolute;
+    bottom: -11%;
+    right: 0;
+    z-index: -1;
 
-  &__title {
+    @include small {
+      bottom: unset;
+      top: 0;
+      transform: translateY(-40%);
+    }
   }
 
   &__row {
