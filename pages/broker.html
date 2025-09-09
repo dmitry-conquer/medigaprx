@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+  </head>
+  <body id="top">
+    <div class="wrapper">
+      {{> header}}
+      <main>
+        <section class="hero section-padding section-padding_bottom">
+          <div class="hero__inner">
+            <div class="hero__container container">
+              <div class="hero__content">
+                <div class="hero__content-inner">
+                  <h1>Medicare Brokers in Fort Lauderdale, FL - Medicare Experts</h1>
+                  <p>
+                    <strong>Licensed Medicare Insurance Agents Dedicated to Your Peace of Mind</strong>
+                  </p>
+                </div>
+                <img
+                  src="/images/brokers/hero.png"
+                  alt="Illustration of a person receiving Medicare guidance"
+                  class="hero__image_mobile"
+                />
+                <div class="hero__buttons buttons">
+                  <a href="#" class="button button_primary">Call Now: (954) 737-7877</a>
+                  <a href="#" class="button button_secondary">Schedule Your Free Consultation</a>
+                </div>
+              </div>
+              <img
+                src="/images/consult/hero-vector.svg"
+                alt="Decorative vector illustration for the hero section"
+                class="hero__vector"
+              />
+              <img
+                src="/images/hero-vector-mobile.svg"
+                alt="Decorative vector illustration for the hero section"
+                class="hero__vector hero__vector_mobile"
+              />
+              <img
+                src="/images/brokers/hero.png"
+                alt="Illustration of a person receiving Medicare guidance"
+                class="hero__image"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="base-row section-padding pt-0">
+          <div class="base-row__container container">
+            <div class="base-row__image img-wrap">
+              <img src="/images/brokers/1.png" alt="" />
+            </div>
+            <div class="base-row__content">
+              <p>
+                At MedigapRx, our team of licensed Medicare insurance agents in Fort Lauderdale is committed to
+                empowering seniors to make confident decisions about their Medicare coverage options. We understand that
+                navigating Medicare plans can feel overwhelming, which is why our insurance professionals provide
+                personalized, unbiased advice every step of the way.
+              </p>
+              <p>
+                As an independent Medicare broker, our team works in your best interest, not for any single insurance
+                company. Our loyalty is to finding you the right coverage for your unique needs and budget. Whether
+                you're ready to enroll in Medicare for the first time, unhappy with your current plan, or comparing
+                employer coverage to Medicare options, our Medicare insurance agents are here to simplify the process
+                and provide comprehensive retirement planning solutions.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="column-tabs section-padding">
+          <div class="column-tabs__container container">
+            <h2 class="column-tabs__title">What Sets MedigapRx Apart?</h2>
+            <div class="column-tabs__row" role="tablist" data-js-tabs data-js-accordion>
+              <div class="column-tabs__buttons">
+                <div class="column-tabs__item">
+                  <button
+                    type="button"
+                    data-js-accordion-button
+                    data-js-tabs-button
+                    id="column-tab-1"
+                    role="tab"
+                    aria-controls="column-tabpanel-1"
+                    aria-selected="true"
+                    tabindex="0"
+                    class="column-tabs__button is-active"
+                  >
+                    <span>Comprehensive Service Range</span>
+                    <div class="column-tabs__icon plan__icon">
+                      <span class="hor"></span>
+                      <span class="ver"></span>
+                    </div>
+                  </button>
+                  <div class="column-tabs__item-container is-active" id="column-tab-container-1"></div>
+                </div>
+                <div class="column-tabs__item">
+                  <button
+                    type="button"
+                    data-js-accordion-button
+                    data-js-tabs-button
+                    id="column-tab-2"
+                    role="tab"
+                    aria-controls="column-tabpanel-2"
+                    aria-selected="false"
+                    tabindex="-1"
+                    class="column-tabs__button"
+                  >
+                    <span>Multiple Insurance Companies Partnership</span>
+                    <div class="column-tabs__icon plan__icon">
+                      <span class="hor"></span>
+                      <span class="ver"></span>
+                    </div>
+                  </button>
+                  <div class="column-tabs__item-container" id="column-tab-container-2"></div>
+                </div>
+              </div>
+              <div
+                data-js-tabs-content
+                class="column-tabs__content"
+                role="tabpanel"
+                id="column-tabpanel-1"
+                aria-labelledby="column-tab-1"
+              >
+                <div class="column-tabs__content-inner" data-adaptive-dom="column-tab-container-1,991.98,first">
+                  <p>
+                    Beyond Medicare guidance, our Medicare health insurance brokers also assist with Medicare supplement
+                    insurance, life insurance, long-term care planning, annuities, asset and retirement planning, and
+                    business group health plans.
+                  </p>
+                  <img src="/images/brokers/2.png" alt="" />
+                </div>
+              </div>
+              <div
+                data-js-tabs-content
+                class="column-tabs__content"
+                role="tabpanel"
+                id="column-tabpanel-2"
+                aria-labelledby="column-tab-2"
+              >
+                <div class="column-tabs__content-inner" data-adaptive-dom="column-tab-container-2,991.98,first">
+                  <p>
+                    To offer comprehensive coverage options, we work with leading private insurance companies, including
+                    United Healthcare, Wellcare, Humana, Aetna, Cigna, Florida Blue, Clover Health, Devoted Health
+                    Plans, EmbleHealth, Globe Life, and SilverScript.
+                  </p>
+                  <img src="/images/brokers/3.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="steps section-padding" id="our-process">
+          <div class="steps__container container">
+            <div class="steps__header">
+              <h2>
+                What to Expect From Our Free Medicare
+                <br />
+                Consultation in Fort Lauderdale
+              </h2>
+              <p class="steps__text">
+                Our simple three-step process makes sure you get the help you need while protecting your sensitive
+                information:
+              </p>
+            </div>
+            <div class="steps__slider swiper-slider" id="steps-slider" data-js-steps>
+              <div class="steps__slider-wrapper swiper-wrapper">
+                <div class="steps__item step swiper-slide" data-js-step>
+                  <img src="/images/proc1.png" alt="Illustration of the consultation" class="step__image" />
+                  <div class="step__body">
+                    <div class="step__body-inner">
+                      <h3 class="step__title">FREE INITIAL CONSULTATION</h3>
+                      <div class="step__row">
+                        <span class="step__number">Step 1</span>
+                        <button type="button" class="step__button" aria-label="Read more" data-js-steps-button>
+                          Read more
+                        </button>
+                      </div>
+                    </div>
+                    <div class="step__description-wrapper" data-js-steps-content>
+                      <div class="step__description-outer">
+                        <div class="step__description custom-scrollbar" data-lenis-prevent>
+                          <h4>Review your current health insurance situation</h4>
+                          <ul>
+                            <li>In our office, at your house or over the phone</li>
+                            <li>Understand your eligible enrollment periods</li>
+                            <li>Review of Employer and Retiree Health Plans</li>
+                            <li>
+                              Compare Retiree options to Medicare to help make informed deicison if taking a Medicare
+                              plan is the right move
+                            </li>
+                          </ul>
+                          <h4>Review your current health insurance situation</h4>
+                          <ul>
+                            <li>
+                              Explain difference between
+                              <a href="#">Medicare Supplement</a>
+                              &
+                              <a href="#">Medicare Advantage Plans</a>
+                            </li>
+                          </ul>
+                          <h4>Review your current health insurance situation</h4>
+                          <ul>
+                            <li>In our office, at your house or over the phone</li>
+                            <li>Understand your eligible enrollment periods</li>
+                            <li>Review of Employer and Retiree Health Plans</li>
+                            <li>
+                              Compare Retiree options to Medicare to help make informed deicison if taking a Medicare
+                              plan is the right move
+                            </li>
+                          </ul>
+                          <h4>Review your current health insurance situation</h4>
+                          <ul>
+                            <li>
+                              Explain difference between
+                              <a href="#">Medicare Supplement</a>
+                              &
+                              <a href="#">Medicare Advantage Plans</a>
+                            </li>
+                          </ul>
+                          <h4>Review your current health insurance situation</h4>
+                          <ul>
+                            <li>In our office, at your house or over the phone</li>
+                            <li>Understand your eligible enrollment periods</li>
+                            <li>Review of Employer and Retiree Health Plans</li>
+                            <li>
+                              Compare Retiree options to Medicare to help make informed deicison if taking a Medicare
+                              plan is the right move
+                            </li>
+                          </ul>
+                          <h4>Review your current health insurance situation</h4>
+                          <ul>
+                            <li>
+                              Explain difference between
+                              <a href="#">Medicare Supplement</a>
+                              &
+                              <a href="#">Medicare Advantage Plans</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="steps__item step swiper-slide" data-js-step>
+                  <img src="/images/proc2.png" alt="Illustration of the consultation" class="step__image" />
+                  <div class="step__body">
+                    <div class="step__body-inner">
+                      <h3 class="step__title">STEP-BY-STEP ENROLLMENT</h3>
+                      <div class="step__row">
+                        <span class="step__number">Step 2</span>
+                        <button type="button" class="step__button" aria-label="Read more" data-js-steps-button>
+                          Read more
+                        </button>
+                      </div>
+                    </div>
+                    <div class="step__description-wrapper" data-js-steps-content>
+                      <div class="step__description-outer">
+                        <div class="step__description custom-scrollbar" data-lenis-prevent>
+                          <h4>Review your current health insurance situation</h4>
+                          <ul>
+                            <li>In our office, at your house or over the phone</li>
+                            <li>Understand your eligible enrollment periods</li>
+                            <li>Review of Employer and Retiree Health Plans</li>
+                            <li>
+                              Compare Retiree options to Medicare to help make informed deicison if taking a Medicare
+                              plan is the right move
+                            </li>
+                          </ul>
+                          <h4>Review your current health insurance situation</h4>
+                          <ul>
+                            <li>
+                              Explain difference between
+                              <a href="#">Medicare Supplement</a>
+                              &
+                              <a href="#">Medicare Advantage Plans</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="steps__item step swiper-slide" data-js-step>
+                  <img src="/images/proc3.png" alt="Illustration of the consultation" class="step__image" />
+                  <div class="step__body">
+                    <div class="step__body-inner">
+                      <h3 class="step__title">ON-GOING SUPPORT</h3>
+                      <div class="step__row">
+                        <span class="step__number">Step 3</span>
+                        <button type="button" class="step__button" aria-label="Read more" data-js-steps-button>
+                          Read more
+                        </button>
+                      </div>
+                    </div>
+                    <div class="step__description-wrapper" data-js-steps-content>
+                      <div class="step__description-outer">
+                        <div class="step__description custom-scrollbar" data-lenis-prevent>
+                          <h4>Review your current health insurance situation</h4>
+                          <ul>
+                            <li>In our office, at your house or over the phone</li>
+                            <li>Understand your eligible enrollment periods</li>
+                            <li>Review of Employer and Retiree Health Plans</li>
+                            <li>
+                              Compare Retiree options to Medicare to help make informed deicison if taking a Medicare
+                              plan is the right move
+                            </li>
+                          </ul>
+                          <h4>Review your current health insurance situation</h4>
+                          <ul>
+                            <li>
+                              Explain difference between
+                              <a href="#">Medicare Supplement</a>
+                              &
+                              <a href="#">Medicare Advantage Plans</a>
+                            </li>
+                          </ul>
+                          <h4>Review your current health insurance situation</h4>
+                          <ul>
+                            <li>In our office, at your house or over the phone</li>
+                            <li>Understand your eligible enrollment periods</li>
+                            <li>Review of Employer and Retiree Health Plans</li>
+                            <li>
+                              Compare Retiree options to Medicare to help make informed deicison if taking a Medicare
+                              plan is the right move
+                            </li>
+                          </ul>
+                          <h4>Review your current health insurance situation</h4>
+                          <ul>
+                            <li>
+                              Explain difference between
+                              <a href="#">Medicare Supplement</a>
+                              &
+                              <a href="#">Medicare Advantage Plans</a>
+                            </li>
+                          </ul>
+                          <h4>Review your current health insurance situation</h4>
+                          <ul>
+                            <li>In our office, at your house or over the phone</li>
+                            <li>Understand your eligible enrollment periods</li>
+                            <li>Review of Employer and Retiree Health Plans</li>
+                            <li>
+                              Compare Retiree options to Medicare to help make informed deicison if taking a Medicare
+                              plan is the right move
+                            </li>
+                          </ul>
+                          <h4>Review your current health insurance situation</h4>
+                          <ul>
+                            <li>
+                              Explain difference between
+                              <a href="#">Medicare Supplement</a>
+                              &
+                              <a href="#">Medicare Advantage Plans</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="steps__pagination swiper-pagination"></div>
+          </div>
+        </section>
+
+        <section class="enroll section-padding">
+          <img src="/images/consult/vector-right.svg" alt="" class="enroll__vector-right" />
+          <img src="/images/consult/vector-left.svg" alt="" class="enroll__vector-left" />
+          <div class="enroll__body enroll-body">
+            <div class="enroll-body__container container">
+              <div class="enroll-body__header">
+                <h2 class="enroll-body__title">
+                  Fort Lauderdale Medicare
+                  <br />
+                  Enrollment Periods
+                </h2>
+                <p class="enroll-body__text">
+                  Understanding when you can enroll or make changes to your Medicare coverage is crucial. Our services
+                  <br />
+                  include guidance on all enrollment periods, and we provide support throughout these important
+                  timeframes:
+                </p>
+              </div>
+              <div class="enroll-body__list">
+                <div class="enroll-body__item">
+                  <div class="enroll-body__item-image img-wrap">
+                    <img src="/images/consult/i1.webp" alt="" class="" />
+                  </div>
+                  <h3 class="enroll-body__item-title">Initial Enrollment Period (IEP)</h3>
+                  <p class="enroll-body__item-text">
+                    If you're approaching 65, help is available during your 7-month Initial Enrollment Period, which
+                    includes the 3 months before your 65th birthday month, your birthday month, and the 3 months after.
+                    Don't navigate this alone; we can guide you through this critical period.
+                  </p>
+                </div>
+                <div class="enroll-body__item">
+                  <div class="enroll-body__item-image img-wrap">
+                    <img src="/images/consult/i2.webp" alt="" class="" />
+                  </div>
+                  <h3 class="enroll-body__item-title">Annual Open Enrollment (October 15 - December 7)</h3>
+                  <p class="enroll-body__item-text">
+                    If you're approaching 65, help is available during your 7-month Initial Enrollment Period, which
+                    includes the 3 months before your 65th birthday month, your birthday month, and the 3 months after.
+                    Don't navigate this alone; we can guide you through this critical period.
+                  </p>
+                </div>
+                <div class="enroll-body__item">
+                  <div class="enroll-body__item-image img-wrap">
+                    <img src="/images/consult/i1.webp" alt="" class="" />
+                  </div>
+                  <h3 class="enroll-body__item-title">Initial Enrollment Period (IEP)</h3>
+                  <p class="enroll-body__item-text">
+                    If you're approaching 65, help is available during your 7-month Initial Enrollment Period, which
+                    includes the 3 months before your 65th birthday month, your birthday month, and the 3 months after.
+                    Don't navigate this alone; we can guide you through this critical period.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="enroll__footer enroll-footer">
+            <div class="enroll-footer__header container">
+              <h2 class="enroll-footer__title">Our Insurance Partners</h2>
+              <p class="enroll-footer__text">
+                We work with leading insurance companies to provide you with the best Medicare options in Fort
+                Lauderdale:
+              </p>
+            </div>
+            <div class="enroll-footer__slider partners__list-wrapper swiper-slider" id="partners-slider">
+              <div class="partners__list swiper-wrapper">
+                <img src="/images/logo1.png" alt="Partner 1" class="partners__item swiper-slide" />
+                <img src="/images/logo2.png" alt="Partner 1" class="partners__item swiper-slide" />
+                <img src="/images/logo3.png" alt="Partner 1" class="partners__item swiper-slide" />
+                <img src="/images/logo4.png" alt="Partner 1" class="partners__item swiper-slide" />
+                <img src="/images/logo5.png" alt="Partner 1" class="partners__item swiper-slide" />
+                <img src="/images/logo6.png" alt="Partner 1" class="partners__item swiper-slide" />
+                <img src="/images/logo7.png" alt="Partner 1" class="partners__item swiper-slide" />
+                <img src="/images/logo8.png" alt="Partner 1" class="partners__item swiper-slide" />
+              </div>
+            </div>
+            <p class="enroll-footer__bottom container">
+              We do not offer every plan available in your area. Currently, we represent 10 organizations that offer 692
+              products in all areas. For comprehensive details on all available programs and resources, please visit the
+              Medicare website, call 1-800-Medicare, or reach out to your State Health Insurance Program (SHIP) for
+              complete information about your options.
+            </p>
+          </div>
+        </section>
+
+        <section class="base-cta section-padding">
+          <img src="/images/consult/cta-vector.svg" alt="" class="base-cta__background" />
+          <div class="base-cta__container container">
+            <h2 class="base-cta__title">Let's Talk About Your Medicare</h2>
+            <div class="base-cta__row">
+              <div class="base-cta__image img-wrap">
+                <img src="/images/consult/cta.webp" alt="" />
+              </div>
+              <div class="base-cta__content">
+                <div class="base-cta__content-text">
+                  <p>
+                    Don't navigate Medicare alone. Our expert team is ready to provide the personalized help you need to
+                    make confident decisions about your healthcare coverage.
+                  </p>
+                  <p>
+                    Our licensed Medicare advisors are standing by to provide your completely free, no-obligation
+                    consultation. Whether you're turning 65, comparing plans, or need help with your current Medicare
+                    coverage, we're here to help Fort Lauderdale residents make the best decisions for their healthcare
+                    future.
+                  </p>
+                </div>
+                <div class="base-cta__content-buttons">
+                  <a href="#" class="button button_primary">Call (954) 737-7877</a>
+                  <a href="#" class="button button_secondary">Book an appointment</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      {{> footer}}
+    </div>
+
+    <script>
+      const acfData = {
+        smoothScroll: 1,
+      };
+    </script>
+    <script type="module" src="../src/scripts/main.ts" defer></script>
+  </body>
+</html>

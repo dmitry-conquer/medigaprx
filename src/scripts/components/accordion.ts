@@ -1,5 +1,5 @@
 type indexStateType = {
-  activeIndexes: Set<number>;
+  activeIndex: number;
 };
 
 const rootSelector = "[data-js-accordion]";
@@ -25,13 +25,8 @@ class Accordion {
     if (!this.rootElement) return;
     this.buttonElements = this.rootElement.querySelectorAll(this.selectors.button);
     this.state = this.getProxyState({
-      activeIndexes: new Set<number>(
-        [...this.buttonElements].reduce((acc: Set<number>, buttonElement: HTMLElement, index: number) => {
-          if (buttonElement.classList.contains(this.stateClasses.isActive)) {
-            acc.add(index);
-          }
-          return acc;
-        }, new Set<number>())
+      activeIndex: [...this.buttonElements].findIndex((buttonElement: HTMLElement) =>
+        buttonElement.classList.contains(this.stateClasses.isActive)
       ),
     });
     this.init();
@@ -41,6 +36,7 @@ class Accordion {
     if (!this.isReady()) return;
     this.bindEvents();
     this.observeContentChanges();
+    this.updateUI();
   }
   isReady(): boolean {
     return !!this.rootElement && !!this.buttonElements.length;
@@ -61,7 +57,7 @@ class Accordion {
       get: (target: indexStateType, prop: keyof indexStateType) => {
         return target[prop];
       },
-      set: (target: indexStateType, prop: keyof indexStateType, value: Set<number>) => {
+      set: (target: indexStateType, prop: keyof indexStateType, value: number) => {
         target[prop] = value;
         this.updateUI();
 
@@ -72,7 +68,7 @@ class Accordion {
 
   private updateUI() {
     this.buttonElements.forEach((buttonElement: HTMLElement, index: number) => {
-      const isActive = this.state.activeIndexes.has(index);
+      const isActive = this.state.activeIndex === index;
       const content = buttonElement.nextElementSibling as HTMLElement;
 
       buttonElement.classList.toggle(this.stateClasses.isActive, isActive);
@@ -83,12 +79,11 @@ class Accordion {
   }
 
   private onButtonClick(index: number) {
-    if (this.state.activeIndexes.has(index)) {
-      this.state.activeIndexes.delete(index);
+    if (this.state.activeIndex === index) {
+      this.state.activeIndex = -1;
     } else {
-      this.state.activeIndexes.add(index);
+      this.state.activeIndex = index;
     }
-    this.state.activeIndexes = new Set<number>(this.state.activeIndexes);
   }
 
   private observeContentChanges(): void {
