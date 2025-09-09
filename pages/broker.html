@@ -154,11 +154,16 @@
         </section>
 
         <section class="bio section-padding">
+          <img src="/images/vector-broker.svg" alt="" class="bio__decor">
           <div class="bio__container container">
+            <h2 class="bio__title">Meet Our Medicare Brokers</h2>
             <div class="bio__row">
               <div class="bio__info">
                 <div class="bio__info-image">
-                  <img src="/images/brokers/5.png" alt="" />
+                  <picture>
+                    <source srcset="/images/brokers/p-pc.png" media="(min-width: 1199.98px)">
+                    <img src="/images/brokers/p-mob.png" alt="" />
+                  </picture>
                 </div>
                 <div class="bio__info-content">
                   <h3>Justin Scheiner - President & Lead Medicare Insurance Agent</h3>
@@ -184,8 +189,6 @@
                     type="button"
                     id="bio-accordion-button-1"
                     aria-controls="bio-accordion-content-1"
-                    aria-selected="true"
-                    tabindex="0"
                     data-js-accordion-button
                   >
                     Industry Leadership
