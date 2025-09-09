@@ -1,4 +1,4 @@
-// @use "fonts";
+@use "fonts";
 @use "reset";
 @use "variables";
 @use "utils";
@@ -33,6 +33,8 @@
 @use "./components/grid-alt";
 @use "./components/column-tabs";
 @use "./components/bio";
+@use "./components/marquee";
+@use "./components/contact-cta";
 
 @import "/node_modules/swiper/swiper.min.css";
 @import "/node_modules/swiper/modules/pagination/pagination.min.css";

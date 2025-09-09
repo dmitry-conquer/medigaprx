@@ -94,6 +94,10 @@ a:not([class]) {
   margin: 0 auto;
 }
 
+.mt-section {
+  margin-top: fluid(40, 90);
+}
+
 .section-padding {
   padding-block: fluid(40, 90);
 

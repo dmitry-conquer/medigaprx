@@ -1,0 +1,107 @@
+@use "../helpers/" as *;
+
+.contact-cta {
+  &__body {
+    display: flex;
+    gap: rem(40) rem(20);
+
+    @include medium {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(16, 24);
+
+    h2,
+    p {
+      margin-bottom: 0 !important;
+    }
+
+    em {
+      font-size: rem(16);
+      font-style: italic;
+    }
+  }
+
+  &__contacts {
+    flex: 0 0 rem(493);
+    padding: fluid(24, 40) fluid(16, 40);
+    border: rem(3) solid var(--color-primary-light);
+    border-radius: rem(24);
+
+    @include medium {
+      border: rem(2) solid var(--color-primary-light);
+      border-radius: rem(16);
+
+      flex: 0 1 auto;
+    }
+
+    &-title {
+      font-size: fluid(18, 32);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: fluid(16, 24);
+      padding-bottom: fluid(16, 24);
+      border-bottom: rem(3) solid var(--color-primary-light);
+
+      @include medium {
+        border-bottom: rem(2) solid var(--color-primary-light);
+      }
+    }
+  }
+
+  &__address {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+  }
+
+  &__address-link {
+    display: flex;
+    gap: rem(8);
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--color-secondary);
+    }
+
+    &::before {
+      content: "";
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      width: rem(20);
+      height: rem(20);
+      flex-shrink: 0;
+      margin-top: rem(5);
+    }
+
+    &--number {
+      &::before {
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2219%22%20height%3D%2219%22%20viewBox%3D%220%200%2019%2019%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M11.276%204.51a3.92%203.92%200%200%201%203.098%203.098m-3.098-6.235a7.06%207.06%200%200%201%206.236%206.228m-.785%206.258v2.353a1.57%201.57%200%200%201-1.71%201.569%2015.5%2015.5%200%200%201-6.768-2.408%2015.3%2015.3%200%200%201-4.706-4.706%2015.5%2015.5%200%200%201-2.408-6.8%201.57%201.57%200%200%201%201.561-1.71H5.05a1.57%201.57%200%200%201%201.569%201.35c.099.752.283%201.492.549%202.203a1.57%201.57%200%200%201-.353%201.655l-.996.996a12.55%2012.55%200%200%200%204.706%204.706l.996-.996a1.57%201.57%200%200%201%201.654-.353c.712.266%201.451.45%202.204.55a1.57%201.57%200%200%201%201.35%201.591%22%20stroke%3D%22%2321A0BE%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+      }
+    }
+
+    &--email {
+      &::before {
+        width: rem(18);
+        height: rem(18);
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2212%22%20viewBox%3D%220%200%2014%2012%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22m1.584%201.417%205.417%204.791%205.416-4.791m-9.791%209.791h8.75c.92%200%201.666-.746%201.666-1.667V2.458c0-.92-.746-1.666-1.666-1.666h-8.75c-.92%200-1.667.746-1.667%201.666v7.083c0%20.921.746%201.667%201.667%201.667%22%20stroke%3D%22%2321A0BE%22%20stroke-width%3D%221.25%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+      }
+    }
+
+    &--location {
+      &::before {
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M16.942%208.431c0%205.49-7.059%2010.197-7.059%2010.197S2.824%2013.922%202.824%208.43a7.059%207.059%200%201%201%2014.118%200%22%20stroke%3D%22%2321A0BE%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M9.88%2010.783a2.353%202.353%200%201%200%200-4.706%202.353%202.353%200%200%200%200%204.706%22%20stroke%3D%22%2321A0BE%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
+      }
+    }
+  }
+
+  &__marquee {
+    margin-top: fluid(10, 40);
+  }
+}

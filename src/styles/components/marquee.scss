@@ -1,0 +1,28 @@
+@use "../helpers/" as *;
+
+.marquee {
+  --slide-width: 0;
+  --slide-gap: #{rem(18)};
+
+  overflow: hidden;
+  max-width: rem(1920);
+  margin: 0 auto;
+
+  &__track {
+    display: flex;
+  }
+
+  &__item {
+    flex: 0 0 var(--slide-width);
+    padding-right: var(--slide-gap);
+
+    &-inner {
+      white-space: nowrap;
+      color: var(--color-primary);
+      font-size: rem(32);
+      font-weight: 700;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+  }
+}

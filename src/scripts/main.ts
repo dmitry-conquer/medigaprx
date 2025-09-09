@@ -8,6 +8,7 @@ import BackTopButton from "./components/back-top";
 import Lenis from "lenis";
 import AOS from "aos";
 import AdaptiveDOM from "./AdaptiveDOM";
+import Marquee from "./components/marquee";
 import "aos/dist/aos.css";
 import "lenis/dist/lenis.css";
 
@@ -17,7 +18,8 @@ declare const acfData: {
 
 document.addEventListener("DOMContentLoaded", () => {
   new AdaptiveDOM();
-  
+  new Marquee("marquee-track");
+
   const steps = new Steps();
   steps.init();
 
