@@ -57,6 +57,8 @@
   box-shadow: var(--shadow);
 
   &:nth-child(1) {
+    border-top-left-radius: rem(32);
+
     .step__image {
       height: rem(413);
       border-top-left-radius: rem(32);
@@ -83,6 +85,8 @@
   }
 
   &:nth-child(3) {
+    border-top-right-radius: rem(32);
+
     .step__image {
       height: rem(221);
       border-top-right-radius: rem(32);
