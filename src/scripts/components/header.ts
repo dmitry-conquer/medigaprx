@@ -87,13 +87,13 @@ export class Header {
   private bindEvents(): void {
     document.addEventListener("click", this.onDocumentClick);
     this.triggerButtonElement?.addEventListener("click", this.onTriggerButtonClick);
-    this.overlayElement?.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        this.triggerButtonElement?.classList.remove(this.stateClasses.isActive);
-        this.overlayElement?.classList.remove(this.stateClasses.isActive);
-        document.documentElement.classList.remove(this.stateClasses.isLock);
-      });
-    });
+    // this.overlayElement?.querySelectorAll("a").forEach(link => {
+    //   link.addEventListener("click", () => {
+    //     this.triggerButtonElement?.classList.remove(this.stateClasses.isActive);
+    //     this.overlayElement?.classList.remove(this.stateClasses.isActive);
+    //     document.documentElement.classList.remove(this.stateClasses.isLock);
+    //   });
+    // });
 
     this.itemHasSubmenuElements.forEach((item, index) => {
       (item.querySelector(":scope > a") as HTMLElement | null)?.addEventListener("click", (event: MouseEvent) => {
