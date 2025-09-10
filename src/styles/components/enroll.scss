@@ -79,12 +79,13 @@
   }
 
   &__slider {
-    margin-block: fluid(40, 60);
+    margin-top: fluid(40, 60);
   }
 
   &__bottom {
     max-width: rem(1180);
     font-weight: 700;
     text-align: center;
+    margin-top: fluid(40, 60);
   }
 }
