@@ -1,6 +1,10 @@
 @use "../helpers/" as *;
 
 .hero {
+  @include medium {
+    padding-bottom: 0 !important;
+  }
+
   &__inner {
     position: relative;
     padding-top: fluid(120, 200);
@@ -14,7 +18,7 @@
   &__content {
     position: relative;
     z-index: 3;
-    max-width: 52%;
+    max-width: 55%;
     @include medium {
       max-width: 100%;
     }
@@ -58,7 +62,7 @@
 
   &__vector {
     position: absolute;
-    top: 0;
+    top: -8%;
     left: 22%;
     z-index: 2;
     width: fluid(200, 827);

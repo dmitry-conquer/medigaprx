@@ -98,6 +98,18 @@ a:not([class]) {
   margin-top: fluid(40, 90);
 }
 
+.section-margin {
+  margin-block: fluid(40, 90);
+
+  &_top {
+    margin-bottom: 0;
+  }
+
+  &_bottom {
+    margin-top: 0;
+  }
+}
+
 .section-padding {
   padding-block: fluid(40, 90);
 
