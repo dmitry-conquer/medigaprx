@@ -1,10 +1,19 @@
 @use "../helpers/" as *;
 
 .base-row {
+  &.base-row_reverse {
+    .base-row__container {
+      flex-direction: row-reverse;
+      @include medium {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
   &__container {
     display: flex;
     align-items: center;
-    gap: fluid(16, 40) rem(40);
+    gap: fluid(30, 93);
     justify-content: space-between;
 
     @include medium {
@@ -15,18 +24,20 @@
   &__image {
     img {
       border-radius: rem(16);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-    @include above-medium {
-      flex: 0 1 rem(768);
-      img {
-        border-radius: rem(60);
-      }
+    flex: 0 1 50%;
+    @include medium {
+      flex: 0 1 50%;
     }
   }
 
   &__content {
-    @include above-medium {
-      flex: 0 1 rem(535);
+    flex: 0 1 50%;
+    @include medium {
+      flex: 0 1 50%;
     }
   }
 }
