@@ -34,7 +34,7 @@
     margin-block: fluid(30, 60);
     overflow: auto;
 
-    @include small {
+    @media (max-width: 33.75rem) {
       margin-right: rem(-20);
     }
   }
@@ -75,6 +75,10 @@
     line-height: 1.25;
     text-transform: uppercase;
     margin-bottom: 0;
+
+    @include medium {
+      font-size: rem(18);
+    }
 
     @include small {
       font-size: rem(13);
