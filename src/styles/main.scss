@@ -37,6 +37,8 @@
 @use "./components/contact-cta";
 @use "./components/about";
 @use "./components/compare";
+@use "./components/image-accordion";
+@use "./components/col-content";
 
 @import "/node_modules/swiper/swiper.min.css";
 @import "/node_modules/swiper/modules/pagination/pagination.min.css";

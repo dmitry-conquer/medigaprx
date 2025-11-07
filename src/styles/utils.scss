@@ -30,12 +30,31 @@
   &::after {
     flex-shrink: 0;
     // background-image: url(""); // inline svg
-
     width: var(--size);
     height: var(--size);
     content: "";
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+  }
+  &::before {
+    flex-shrink: 0;
+    // background-image: url(""); // inline svg
+    width: var(--size);
+    height: var(--size);
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--before-arrow-down {
+    --size: #{rem(22)};
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2222%22%20height%3D%2212%22%20viewBox%3D%220%200%2022%2012%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M19.847%2011.12a1.46%201.46%200%200%201-1.058-.378l-7.923-6.85-7.909%206.837A1.46%201.46%200%200%201%20.86%2010.62a1.464%201.464%200%200%201%20.18-2.092h.001L9.908.86a1.46%201.46%200%200%201%20.717-.34l.115-.015a1.46%201.46%200%200%201%201.083.353l8.868%207.67a1.46%201.46%200%200%201-.844%202.591Z%22%20fill%3D%22%236dbf46%22%20stroke%3D%22%236dbf46%22%2F%3E%3C%2Fsvg%3E");
+    }
+    &::after {
+      display: none;
+    }
   }
 }
