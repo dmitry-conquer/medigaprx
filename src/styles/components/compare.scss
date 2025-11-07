@@ -54,7 +54,7 @@
 
 .table-compare {
   width: 100%;
-  min-width: rem(520);
+  min-width: rem(540);
 
   &__header {
     margin-bottom: fluid(8, 28);
@@ -64,7 +64,7 @@
 
     @include small {
       display: grid;
-      grid-template-columns: rem(80) 1fr 1fr;
+      grid-template-columns: rem(100) 1fr 1fr;
     }
   }
 
@@ -132,7 +132,7 @@
 
     @include small {
       display: grid;
-      grid-template-columns: rem(80) 1fr 1fr;
+      grid-template-columns: rem(100) 1fr 1fr;
     }
   }
 

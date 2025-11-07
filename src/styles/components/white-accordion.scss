@@ -3,6 +3,7 @@
 .white-accordion {
   background-color: var(--color-light);
   border-radius: rem(100) rem(100) 0 0;
+  padding: fluid(40, 90) 0 fluid(30, 60) 0;
 
   @include medium {
     border-radius: rem(32) rem(32) 0 0;
