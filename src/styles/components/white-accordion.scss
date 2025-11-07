@@ -1,0 +1,78 @@
+@use "../helpers/" as *;
+
+.white-accordion {
+  background-color: var(--color-light);
+  border-radius: rem(100) rem(100) 0 0;
+
+  @include medium {
+    border-radius: rem(32) rem(32) 0 0;
+  }
+
+  &__container {
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 32.43% auto;
+    gap: rem(32) fluid(0, 217);
+
+    @include medium {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__content {
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: fluid(24, 70);
+    }
+  }
+
+  &__list {
+  }
+
+  &__item {
+    border-radius: rem(16);
+    background-color: var(--color-white);
+    padding: rem(16) fluid(20, 40);
+
+    &:not(:last-child) {
+      margin-bottom: rem(18);
+    }
+  }
+
+  &__item-button {
+    text-align: left;
+    width: 100%;
+    color: var(--color-dark);
+    font-size: fluid(18, 28);
+    font-weight: 500;
+    line-height: 1.14;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: rem(16);
+  }
+
+  &__item-panel {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+
+  &__item-panel-content {
+    padding-top: rem(12);
+    font-size: fluid(18, 20);
+    line-height: 1.3;
+  }
+
+  &__footer {
+    margin-top: fluid(90, 180);
+    max-width: rem(1130);
+
+    h3 {
+      margin-bottom: rem(16);
+    }
+  }
+}
